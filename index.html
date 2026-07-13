@@ -116,9 +116,9 @@
   .module-container{display:grid; grid-template-columns:1fr 1fr; gap:30px; align-items:center; margin-bottom:40px;}
   .module-container:nth-child(even) {grid-template-columns:1fr 1fr;}
   .module-container:nth-child(even) .module{order:2;}
-  .module-container:nth-child(even) .module-graphic{order:1;}
-  .module-graphic{width:100%; max-width:200px; height:auto; justify-self:center;}
-  .module-graphic svg{width:100%; height:auto;}
+  .module-container:nth-child(even) .module-image{order:1;}
+  .module-image{width:100%; max-width:250px; height:250px; border-radius:12px; overflow:hidden; border:1px solid var(--line); justify-self:center;}
+  .module-image img{width:100%; height:100%; object-fit:cover; display:block;}
   .module{
     background:var(--bg-panel); border:1px solid var(--line); border-radius:14px;
     padding:28px 30px; position:relative; overflow:hidden;
@@ -180,7 +180,7 @@
     position:absolute;
     bottom:20px;
     left:24px;
-    height:60px;
+    height:70px;
     width:auto;
   }
 
@@ -189,12 +189,13 @@
     .module-container{grid-template-columns:1fr;}
     .module-container:nth-child(even) {grid-template-columns:1fr;}
     .module-container:nth-child(even) .module{order:0;}
-    .module-container:nth-child(even) .module-graphic{order:0;}
+    .module-container:nth-child(even) .module-image{order:0;}
+    .module-image{max-width:100%; height:300px;}
     .problem-grid, .materials{grid-template-columns:1fr;}
     .module ul{grid-template-columns:1fr;}
     .bono ul{grid-template-columns:1fr;}
     .results{grid-template-columns:1fr;}
-    .footer-logo{height:50px;}
+    .footer-logo{height:60px;}
   }
 </style>
 </head>
@@ -305,33 +306,15 @@
         </ul>
         <div class="taller"><b>Caso práctico:</b> vender electrógeno a inmobiliaria. <b>Entregable:</b> mapa de actores.</div>
       </div>
-      <div class="module-graphic">
-        <svg viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg">
-          <rect x="20" y="20" width="110" height="110" rx="10" fill="#0c131f" stroke="#35e4d6" stroke-width="2"/>
-          <circle cx="50" cy="60" r="12" fill="#ffb347" stroke="#ffb347" stroke-width="2"/>
-          <circle cx="100" cy="60" r="12" fill="#35e4d6" stroke="#35e4d6" stroke-width="2"/>
-          <line x1="50" y1="72" x2="50" y2="90" stroke="#ffb347" stroke-width="2"/>
-          <line x1="100" y1="72" x2="100" y2="90" stroke="#35e4d6" stroke-width="2"/>
-          <path d="M 50 90 Q 75 105 100 90" fill="none" stroke="#ffb347" stroke-width="2"/>
-          <text x="75" y="130" text-anchor="middle" fill="#35e4d6" font-family="Arial" font-size="11" font-weight="bold">Conexión B2B</text>
-        </svg>
+      <div class="module-image">
+        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=300&h=300&fit=crop" alt="Módulo 1 - Asesoramiento B2B">
       </div>
     </div>
 
     <!-- MÓDULO 2 -->
     <div class="module-container">
-      <div class="module-graphic">
-        <svg viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg">
-          <rect x="20" y="30" width="20" height="80" fill="#35e4d6" rx="3"/>
-          <rect x="50" y="50" width="20" height="60" fill="#ffb347" rx="3"/>
-          <rect x="80" y="40" width="20" height="70" fill="#35e4d6" rx="3"/>
-          <path d="M 30 25 L 60 15 L 90 20 L 110 10" fill="none" stroke="#ffb347" stroke-width="2.5"/>
-          <circle cx="30" cy="25" r="3" fill="#ffb347"/>
-          <circle cx="60" cy="15" r="3" fill="#ffb347"/>
-          <circle cx="90" cy="20" r="3" fill="#ffb347"/>
-          <circle cx="110" cy="10" r="3" fill="#ffb347"/>
-          <text x="75" y="130" text-anchor="middle" fill="#35e4d6" font-family="Arial" font-size="11" font-weight="bold">Oportunidades</text>
-        </svg>
+      <div class="module-image">
+        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=300&h=300&fit=crop" alt="Módulo 2 - Prospección">
       </div>
       <div class="module">
         <div class="module-head">
@@ -365,34 +348,15 @@
         </ul>
         <div class="taller"><b>Taller:</b> preparación de propuesta. <b>Caso:</b> sistema contra incendio + electrógeno.</div>
       </div>
-      <div class="module-graphic">
-        <svg viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg">
-          <rect x="25" y="25" width="100" height="100" rx="8" fill="#0c131f" stroke="#35e4d6" stroke-width="2"/>
-          <rect x="35" y="35" width="30" height="40" fill="#ffb347" rx="3"/>
-          <text x="50" y="62" text-anchor="middle" fill="#070b12" font-family="Arial" font-size="10" font-weight="bold">Idea</text>
-          <rect x="75" y="35" width="30" height="40" fill="#35e4d6" rx="3"/>
-          <text x="90" y="62" text-anchor="middle" fill="#070b12" font-family="Arial" font-size="10" font-weight="bold">ROI</text>
-          <path d="M 65 55 L 75 55" fill="none" stroke="#ffb347" stroke-width="2" stroke-dasharray="5,5"/>
-          <circle cx="50" cy="90" r="8" fill="#ffb347"/>
-          <circle cx="90" cy="90" r="8" fill="#35e4d6"/>
-          <line x1="58" y1="90" x2="82" y2="90" stroke="#ffb347" stroke-width="2"/>
-          <text x="75" y="130" text-anchor="middle" fill="#35e4d6" font-family="Arial" font-size="11" font-weight="bold">Soluciones</text>
-        </svg>
+      <div class="module-image">
+        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=300&h=300&fit=crop" alt="Módulo 3 - Soluciones">
       </div>
     </div>
 
     <!-- MÓDULO 4 -->
     <div class="module-container">
-      <div class="module-graphic">
-        <svg viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="75" cy="60" r="35" fill="none" stroke="#35e4d6" stroke-width="3"/>
-          <path d="M 75 25 A 35 35 0 0 1 107 92" fill="none" stroke="#ffb347" stroke-width="3" stroke-linecap="round"/>
-          <circle cx="107" cy="92" r="5" fill="#ffb347"/>
-          <circle cx="75" cy="25" r="4" fill="#35e4d6"/>
-          <text x="75" y="65" text-anchor="middle" fill="#ffb347" font-family="Arial" font-size="14" font-weight="bold">100%</text>
-          <line x1="40" y1="120" x2="110" y2="120" stroke="#35e4d6" stroke-width="2"/>
-          <text x="75" y="130" text-anchor="middle" fill="#35e4d6" font-family="Arial" font-size="11" font-weight="bold">Cierre</text>
-        </svg>
+      <div class="module-image">
+        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=300&h=300&fit=crop" alt="Módulo 4 - Cierre">
       </div>
       <div class="module">
         <div class="module-head">
@@ -470,7 +434,7 @@
 </section>
 
 <footer>
-  <img src="https://imgur.com/YxqK5wZ.png" alt="Logo TAMESAD-ING" class="footer-logo">
+  <img src="https://i.imgur.com/YxqK5wZ.png" alt="Logo TAMESAD-ING" class="footer-logo">
   <div style="padding-right:100px;">
     Capacitación: Ventas Técnicas B2B — Cómo vender soluciones industriales y cerrar proyectos de alto valor.
   </div>
