@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ingeniería y Ventas B2B — Cierra Proyectos de Gran Escala</title>
+<style>
+  :root{
+    --bg: #070b12;
+    --bg-panel: #0c131f;
+    --line: #1b2635;
+    --ink: #dfe7f2;
+    --ink-dim: #8ea0b8;
+    --amber: #ffb347;
+    --cyan: #35e4d6;
+    --font-display: 'Space Grotesk', 'Segoe UI', sans-serif;
+    --font-body: 'Inter', 'Segoe UI', sans-serif;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background:
+      radial-gradient(1100px 600px at 12% -10%, rgba(255,179,71,.16), transparent 60%),
+      radial-gradient(900px 500px at 100% 0%, rgba(53,228,214,.14), transparent 55%),
+      repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(53,228,214,0.045) 40px),
+      repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(53,228,214,0.045) 40px),
+      var(--bg);
+    color: var(--ink);
+    font-family: var(--font-body);
+    line-height:1.55;
+  }
+  a{color:inherit;}
+  .wrap{max-width:1080px; margin:0 auto; padding:0 24px;}
+  .eyebrow{
+    font-family: var(--font-display);
+    letter-spacing:.18em; text-transform:uppercase; font-size:12px;
+    color: var(--amber); display:flex; align-items:center; gap:10px;
+  }
+  .eyebrow::before{content:""; width:22px; height:1px; background:var(--amber); display:inline-block;}
+
+  /* HERO */
+  header.hero{padding:90px 0 70px; border-bottom:1px solid var(--line);}
+  .badges{display:flex; gap:10px; flex-wrap:wrap; margin-top:26px;}
+  .badge{
+    font-size:12.5px; color:var(--ink-dim); border:1px solid var(--line);
+    padding:6px 12px; border-radius:100px; font-family: var(--font-display);
+  }
+  h1{
+    font-family: var(--font-display); font-weight:700;
+    font-size: clamp(38px, 6.4vw, 68px); line-height:1.04; margin:20px 0 24px;
+    max-width: 880px; letter-spacing:-0.01em;
+  }
+  h1 span{
+    background: linear-gradient(100deg, var(--cyan), var(--amber));
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+  }
+  .hero p.speech{
+    max-width:680px; color: var(--ink-dim); font-size:18px; margin-bottom:36px;
+    border-left: 2px solid var(--amber); padding-left:18px;
+  }
+  .cta-row{display:flex; gap:16px; flex-wrap:wrap; align-items:center;}
+  .btn{
+    font-family: var(--font-display); font-weight:700; font-size:15.5px;
+    padding:16px 30px; border-radius:9px; text-decoration:none; display:inline-block;
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .btn-primary{ background: linear-gradient(120deg, var(--amber), #ff8a3d); color:#111;
+    box-shadow: 0 8px 30px -6px rgba(255,179,71,.45); }
+  .btn-primary:hover{ transform: translateY(-2px); box-shadow: 0 14px 38px -8px rgba(255,179,71,.65); }
+  .btn-ghost{ border:1px solid var(--line); color:var(--ink); }
+  .btn-ghost:hover{ border-color: var(--cyan); color: var(--cyan); }
+
+  section{padding:70px 0; border-bottom:1px solid var(--line);}
+  h2{font-family:var(--font-display); font-weight:600; font-size:clamp(24px,3.4vw,34px); margin-bottom:14px;}
+  .lede{color:var(--ink-dim); max-width:640px; margin-bottom:40px; font-size:16px;}
+
+  /* PROBLEM */
+  .problem-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px;}
+  .problem-card{background:var(--bg-panel); border:1px solid var(--line); border-radius:12px; padding:24px;}
+  .problem-card .num{font-family:var(--font-display); color:var(--cyan); font-size:13px; letter-spacing:.1em;}
+  .problem-card p{margin-top:10px; color:var(--ink-dim); font-size:14.5px;}
+
+  /* RESULTS */
+  .results{display:grid; grid-template-columns:repeat(2,1fr); gap:14px 40px;}
+  .result-item{display:flex; gap:14px; align-items:flex-start; padding:14px 0; border-top:1px solid var(--line);}
+  .result-item svg{flex-shrink:0; margin-top:3px;}
+  .result-item span{font-size:15.5px;}
+
+  /* MODULES */
+  .module{
+    background:var(--bg-panel); border:1px solid var(--line); border-radius:14px;
+    padding:28px 30px; margin-bottom:16px; position:relative; overflow:hidden;
+  }
+  .module::before{
+    content:""; position:absolute; left:0; top:0; bottom:0; width:3px;
+    background: linear-gradient(180deg, var(--amber), var(--cyan));
+  }
+  .module-head{display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:8px; margin-bottom:10px;}
+  .module-head h3{font-family:var(--font-display); font-size:19px; font-weight:600;}
+  .module-meta{font-size:12.5px; color:var(--cyan); font-family:var(--font-display); letter-spacing:.05em;}
+  .module p.obj{color:var(--ink-dim); font-size:14.5px; margin-bottom:14px;}
+  .module ul{list-style:none; display:grid; grid-template-columns:repeat(2,1fr); gap:8px 20px;}
+  .module li{font-size:14px; color:var(--ink); padding-left:16px; position:relative;}
+  .module li::before{content:"—"; position:absolute; left:0; color:var(--amber);}
+  .module .taller{
+    margin-top:16px; padding-top:14px; border-top:1px dashed var(--line);
+    font-size:13.5px; color:var(--ink-dim);
+  }
+  .module .taller b{color:var(--cyan); font-family:var(--font-display); font-weight:600;}
+
+  /* BONO */
+  .bono{
+    background: radial-gradient(circle at 20% 20%, rgba(255,179,71,.13), transparent 60%), var(--bg-panel);
+    border:1px solid var(--amber); border-radius:16px; padding:34px;
+  }
+  .bono .eyebrow{color:var(--amber);}
+  .bono h3{font-family:var(--font-display); font-size:22px; margin:12px 0 16px;}
+  .bono ul{list-style:none; display:grid; grid-template-columns:repeat(2,1fr); gap:10px;}
+  .bono li{font-size:14.5px; padding-left:18px; position:relative;}
+  .bono li::before{content:"★"; position:absolute; left:0; color:var(--amber); font-size:11px; top:3px;}
+
+  /* MATERIALS */
+  .materials{display:grid; grid-template-columns:repeat(3,1fr); gap:16px;}
+  .mat-card{border:1px solid var(--line); border-radius:12px; padding:20px; text-align:left;}
+  .mat-card .check{color:var(--cyan); font-family:var(--font-display); font-size:13px;}
+  .mat-card p{margin-top:8px; font-size:14.5px;}
+
+  /* AUDIENCE */
+  .aud-list{display:flex; flex-wrap:wrap; gap:12px;}
+  .aud-pill{border:1px solid var(--line); border-radius:100px; padding:10px 18px; font-size:14px; color:var(--ink-dim);}
+
+  /* FINAL CTA */
+  .final{
+    text-align:center; padding:90px 0; border-bottom:none;
+    background: radial-gradient(ellipse at center, rgba(53,228,214,.08), transparent 60%);
+  }
+  .final h2{max-width:640px; margin:0 auto 16px;}
+  .final p{color:var(--ink-dim); max-width:520px; margin:0 auto 34px;}
+  .contact-note{margin-top:22px; font-size:13px; color:var(--ink-dim);}
+  .contact-note code{color:var(--cyan);}
+
+  footer{padding:32px 0; text-align:center; color:var(--ink-dim); font-size:12.5px;}
+
+  @media(max-width:760px){
+    .problem-grid, .materials{grid-template-columns:1fr;}
+    .module ul{grid-template-columns:1fr;}
+    .bono ul{grid-template-columns:1fr;}
+    .results{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Capacitación · Ventas Técnicas B2B</div>
+    <h1>Ingeniería y Ventas B2B: cierra proyectos de <span>gran escala</span> y contratos multianuales rentables</h1>
+    <p class="speech">Como ingeniero dominas planos, equipos y cálculos… pero ¿cuántas veces has visto proyectos grandes que se van por no saber transformar tu conocimiento en un acuerdo firme? Aquí aprendes a construir cartera rentable a largo plazo, no a perseguir ventas chiquitas.</p>
+    <div class="badges">
+      <span class="badge">Modalidad: Virtual</span>
+      <span class="badge">12 horas · 4 sesiones de 3h</span>
+      <span class="badge">Nivel Intermedio–Avanzado</span>
+    </div>
+    <div class="cta-row" style="margin-top:34px;">
+      <a href="#inscripcion" class="btn btn-primary">Quiero inscribirme</a>
+      <a href="#programa" class="btn btn-ghost">Ver el programa completo</a>
+    </div>
+  </div>
+</header>
+
+<section id="stats" style="padding:0; border-bottom:1px solid var(--line);">
+  <div class="wrap" style="display:grid; grid-template-columns:repeat(4,1fr); gap:0; padding:46px 24px;">
+    <div style="text-align:center; border-right:1px solid var(--line);">
+      <div style="font-family:var(--font-display); font-weight:700; font-size:clamp(30px,4vw,44px); background:linear-gradient(100deg,var(--cyan),var(--amber)); -webkit-background-clip:text; background-clip:text; color:transparent;">4</div>
+      <div style="color:var(--ink-dim); font-size:13px; margin-top:4px;">módulos aplicables</div>
+    </div>
+    <div style="text-align:center; border-right:1px solid var(--line);">
+      <div style="font-family:var(--font-display); font-weight:700; font-size:clamp(30px,4vw,44px); background:linear-gradient(100deg,var(--cyan),var(--amber)); -webkit-background-clip:text; background-clip:text; color:transparent;">12h</div>
+      <div style="color:var(--ink-dim); font-size:13px; margin-top:4px;">de contenido en vivo</div>
+    </div>
+    <div style="text-align:center; border-right:1px solid var(--line);">
+      <div style="font-family:var(--font-display); font-weight:700; font-size:clamp(30px,4vw,44px); background:linear-gradient(100deg,var(--cyan),var(--amber)); -webkit-background-clip:text; background-clip:text; color:transparent;">6</div>
+      <div style="color:var(--ink-dim); font-size:13px; margin-top:4px;">entregables listos para usar</div>
+    </div>
+    <div style="text-align:center;">
+      <div style="font-family:var(--font-display); font-weight:700; font-size:clamp(30px,4vw,44px); background:linear-gradient(100deg,var(--cyan),var(--amber)); -webkit-background-clip:text; background-clip:text; color:transparent;">1</div>
+      <div style="color:var(--ink-dim); font-size:13px; margin-top:4px;">bono de venta técnica eléctrica</div>
+    </div>
+  </div>
+</section>
+
+<section id="problema">
+  <div class="wrap">
+    <div class="eyebrow">El problema</div>
+    <h2>Sabes de ingeniería. El acuerdo se te escapa igual.</h2>
+    <div class="problem-grid">
+      <div class="problem-card">
+        <div class="num">01</div>
+        <p>Proyectos grandes que se enfrían porque el conocimiento técnico nunca se convierte en un argumento comercial sólido.</p>
+      </div>
+      <div class="problem-card">
+        <div class="num">02</div>
+        <p>Reuniones con compras, operaciones y gerencia donde no se habla el mismo idioma que ellos necesitan escuchar.</p>
+      </div>
+      <div class="problem-card">
+        <div class="num">03</div>
+        <p>Cartera hecha de ventas chicas y esporádicas, en vez de contratos multianuales que dan estabilidad real.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="resultados">
+  <div class="wrap">
+    <div class="eyebrow">Al terminar</div>
+    <h2>Lo que vas a poder hacer</h2>
+    <p class="lede">Este programa convierte tu conocimiento técnico en capacidad comercial, sin trucos de vendedor de mostrador.</p>
+    <div class="results">
+      <div class="result-item"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M2 8l4 4 8-8" stroke="#35e4d6" stroke-width="2" fill="none"/></svg><span>Conseguir más reuniones con los tomadores de decisión correctos.</span></div>
+      <div class="result-item"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M2 8l4 4 8-8" stroke="#35e4d6" stroke-width="2" fill="none"/></svg><span>Diagnosticar necesidades técnicas antes de proponer nada.</span></div>
+      <div class="result-item"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M2 8l4 4 8-8" stroke="#35e4d6" stroke-width="2" fill="none"/></svg><span>Elaborar propuestas de valor, no solo cotizaciones.</span></div>
+      <div class="result-item"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M2 8l4 4 8-8" stroke="#35e4d6" stroke-width="2" fill="none"/></svg><span>Incrementar tu tasa de cierre en proyectos complejos.</span></div>
+      <div class="result-item"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M2 8l4 4 8-8" stroke="#35e4d6" stroke-width="2" fill="none"/></svg><span>Vender proyectos industriales con mayor margen.</span></div>
+      <div class="result-item"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M2 8l4 4 8-8" stroke="#35e4d6" stroke-width="2" fill="none"/></svg><span>Construir cartera de contratos multianuales, no ventas sueltas.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="programa">
+  <div class="wrap">
+    <div class="eyebrow">Programa</div>
+    <h2>4 módulos, 12 horas, contenido 100% aplicable</h2>
+    <p class="lede">Dirigido a ingenieros comerciales, ejecutivos técnicos, y equipos de ventas, proyectos y operaciones.</p>
+
+    <div class="module">
+      <div class="module-head">
+        <h3>Módulo 1 — Fundamentos de venta técnica B2B</h3>
+        <span class="module-meta">3 HORAS</span>
+      </div>
+      <p class="obj">Objetivo: entender cómo compran las empresas y posicionarte como asesor técnico, no como vendedor.</p>
+      <ul>
+        <li>Venta transaccional vs. consultiva</li>
+        <li>Ciclo de compra industrial</li>
+        <li>Los 5 perfiles del cliente industrial (compras, logística, operaciones, proyectos, gerencia)</li>
+        <li>El proceso comercial completo: prospección → diagnóstico → propuesta → negociación → cierre → fidelización</li>
+      </ul>
+      <div class="taller"><b>Caso práctico:</b> vender un grupo electrógeno a una inmobiliaria. <b>Entregable:</b> mapa de actores de decisión.</div>
+    </div>
+
+    <div class="module">
+      <div class="module-head">
+        <h3>Módulo 2 — Prospección y detección de oportunidades</h3>
+        <span class="module-meta">3 HORAS</span>
+      </div>
+      <p class="obj">Objetivo: generar reuniones reales y detectar necesidades antes de que salga la licitación.</p>
+      <ul>
+        <li>Segmentación: constructoras, inmobiliarias, minería, industria, retail</li>
+        <li>Fuentes para detectar proyectos: portales, redes profesionales, referidos, visitas</li>
+        <li>Modelo de contacto inicial: apertura, contexto, valor, solicitud</li>
+        <li>Construcción de mensaje comercial efectivo</li>
+      </ul>
+      <div class="taller"><b>Taller:</b> construcción de mensaje comercial. <b>Entregable:</b> plantillas de WhatsApp, correo y llamada.</div>
+    </div>
+
+    <div class="module">
+      <div class="module-head">
+        <h3>Módulo 3 — Diagnóstico y presentación de soluciones</h3>
+        <span class="module-meta">3 HORAS</span>
+      </div>
+      <p class="obj">Objetivo: convertir necesidades detectadas en propuestas técnicas ganadoras.</p>
+      <ul>
+        <li>Preguntas clave de levantamiento de información</li>
+        <li>Venta basada en valor: continuidad operativa, menor riesgo, menor costo total — no precio</li>
+        <li>Estructura de propuesta: problema, solución, beneficio, inversión, ROI</li>
+      </ul>
+      <div class="taller"><b>Taller:</b> preparación de propuesta técnica. <b>Caso:</b> sistema contra incendio + grupo electrógeno.</div>
+    </div>
+
+    <div class="module">
+      <div class="module-head">
+        <h3>Módulo 4 — Negociación y cierre</h3>
+        <span class="module-meta">3 HORAS</span>
+      </div>
+      <p class="obj">Objetivo: cerrar ventas sin competir solo por precio.</p>
+      <ul>
+        <li>Cómo responder a "está caro" sin bajar el precio</li>
+        <li>Técnicas de negociación: anclaje, intercambio, cierre por siguiente paso, cierre por valor</li>
+        <li>Secuencia de seguimiento profesional (día 1, 3, 7, 14)</li>
+        <li>KPIs comerciales: reuniones, cotizaciones, conversión, ticket promedio</li>
+      </ul>
+      <div class="taller"><b>Taller final:</b> simulación de cierre en vivo.</div>
+    </div>
+  </div>
+</section>
+
+<section id="bonoseccion">
+  <div class="wrap">
+    <div class="bono">
+      <div class="eyebrow">Bono incluido</div>
+      <h3>Cómo vender grupos electrógenos y soluciones eléctricas a constructoras e inmobiliarias</h3>
+      <ul>
+        <li>Cómo identificar la necesidad real del cliente</li>
+        <li>Cómo calcular el tamaño de la oportunidad</li>
+        <li>Cómo llegar directo a compras</li>
+        <li>Cómo lograr que te den la reunión</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="materiales">
+  <div class="wrap">
+    <div class="eyebrow">Qué recibes</div>
+    <h2>Materiales incluidos</h2>
+    <div class="materials">
+      <div class="mat-card"><div class="check">✓ INCLUIDO</div><p>Presentación en PPT de todo el curso</p></div>
+      <div class="mat-card"><div class="check">✓ INCLUIDO</div><p>Guía de preguntas comerciales</p></div>
+      <div class="mat-card"><div class="check">✓ INCLUIDO</div><p>Plantillas de seguimiento comercial</p></div>
+      <div class="mat-card"><div class="check">✓ INCLUIDO</div><p>Formato CRM listo para usar</p></div>
+      <div class="mat-card"><div class="check">✓ INCLUIDO</div><p>Caso real de la industria</p></div>
+      <div class="mat-card"><div class="check">✓ INCLUIDO</div><p>Certificado de participación</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="publico">
+  <div class="wrap">
+    <div class="eyebrow">Para quién es</div>
+    <h2>Dirigido a</h2>
+    <div class="aud-list">
+      <span class="aud-pill">Ingenieros comerciales</span>
+      <span class="aud-pill">Ejecutivos técnicos</span>
+      <span class="aud-pill">Ventas industriales</span>
+      <span class="aud-pill">Equipos de proyectos</span>
+      <span class="aud-pill">Operaciones</span>
+    </div>
+  </div>
+</section>
+
+<section id="inscripcion" class="final" style="border-bottom:none;">
+  <div class="wrap">
+    <div class="eyebrow" style="justify-content:center;">Cupos limitados</div>
+    <h2>Deja de perseguir ventas chiquitas.<br>Construye cartera multianual.</h2>
+    <p>4 sesiones, 12 horas, herramientas listas para usar desde la primera semana.</p>
+    <a href="#" class="btn btn-primary">Quiero inscribirme ahora</a>
+    <p class="contact-note">Para conectar el botón a tu proceso real de inscripción, reemplaza el enlace por tu formulario, WhatsApp <code>[escribe tu número aquí]</code> o correo de contacto.</p>
+  </div>
+</section>
+
+<footer>
+  Capacitación: Ventas Técnicas B2B — Cómo vender soluciones industriales y cerrar proyectos de alto valor.
+</footer>
+
+</body>
+</html>
