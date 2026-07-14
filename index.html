@@ -9,9 +9,9 @@
   <meta name="description" content="Formación en ventas B2B para empresas B2B. 4 módulos, 8 horas. Herramientas para construir cartera multianual. Lima, Perú.">
   
   <!-- Favicon TAMESAD TA -->
-<link rel="icon" type="image/png" sizes="32x32" href="./img/favicon.png">
-<link rel="icon" type="image/png" sizes="16x16" href="./img/favicon.png">
-<link rel="apple-touch-icon" sizes="180x180" href="./img/favicon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon.png">
   
   <!-- Google Analytics - CAMBIA G-2WT5M6ZYCW por tu ID -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-2WT5M6ZYCW"></script>
@@ -258,6 +258,7 @@
     #contacto form > *:nth-child(3) { animation-delay: 0.3s; }
     #contacto form > *:nth-child(4) { animation-delay: 0.4s; }
     #contacto form > *:nth-child(5) { animation-delay: 0.5s; }
+    #contacto form > *:nth-child(6) { animation-delay: 0.6s; }
 
     @keyframes fade-in-up {
       from {
@@ -269,7 +270,27 @@
         transform: translateY(0);
       }
     }
-     
+    
+    /* Barra de urgencia */
+    .urgency-bar {
+      background:linear-gradient(90deg,#4CC7F5,#27B6A8);
+      color:#0B0E13;
+      text-align:center;
+      padding:10px 20px;
+      font-weight:600;
+      font-size:14px;
+      position:sticky;
+      top:0;
+      z-index:100;
+    }
+  </style>
+</head>
+<body>
+  <!-- BARRA DE URGENCIA -->
+  <div class="urgency-bar">
+    🔥 Próxima cohorte inicia: 22 de julio 2026 | Solo quedan 25 cupos disponibles
+  </div>
+
   <header>
     <div class="wrap nav">
       <div class="brand">
@@ -398,6 +419,8 @@
       <p>Déjanos tus datos y te contactamos en 24 horas para coordinar tu inscripción.</p>
       
       <form action="https://formspree.io/f/xykryajb" method="POST">
+        <input type="hidden" name="_next" value="https://tamesading.github.io/tamesad.com/gracias.html">
+        
         <div class="form-group">
           <input 
             type="text" 
@@ -517,28 +540,7 @@
         <p><a href="https://wa.me/51939834534" style="color:var(--ink-muted);text-decoration:none;">+51 939 834 534</a></p>
       </div>
     </div>
-       /* Barra de urgencia */
-    .urgency-bar {
-      background:linear-gradient(90deg,#4CC7F5,#27B6A8);
-      color:#0B0E13;
-      text-align:center;
-      padding:10px 20px;
-      font-weight:600;
-      font-size:14px;
-      position:sticky;
-      top:0;
-      z-index:100;
-    }
-  </style>
-</head>
-<body>
-  <!-- BARRA DE URGENCIA -->
-  <div class="urgency-bar">
-    🔥 Próxima cohorte inicia: 22 de julio 2026 | Solo quedan 25 cupos disponibles
-  </div>
-
   </footer>
- 
 
 </body>
 </html>
