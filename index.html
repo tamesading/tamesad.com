@@ -223,16 +223,47 @@
       <h2 style="text-align:center;">¿Listo para construir cartera multianual?</h2>
       <p style="text-align:center; max-width:600px; margin:0 auto 30px;">Déjanos tus datos y te contactamos en 24 horas para coordinar tu inscripción.</p>
       
-      <form class="contact-form" action="mailto:tamesading@gmail.com" method="post" enctype="text/plain">
-        <input type="text" name="Nombre" placeholder="Tu nombre completo" required>
-        <input type="email" name="Email" placeholder="Tu correo corporativo" required>
-        <input type="tel" name="WhatsApp" placeholder="Tu WhatsApp: +51 999 999 999" required>
-        <textarea name="Mensaje" placeholder="Cuéntanos de tu empresa y qué proyectos vendes" required></textarea>
-        
-        <button type="submit" class="btn btn-primary" style="width:100%; border:none; cursor:pointer;">
-          Enviar mensaje
-        </button>
-      </form>
+<!-- FORMULARIO TAMESAD CON FORMSPREE -->
+<form action="https://formspree.io/f/xykryajb" method="POST">
+  <input 
+    type="text" 
+    name="nombre" 
+    placeholder="Tu nombre completo" 
+    autocomplete="name"
+    required
+  >
+  
+  <input 
+    type="email" 
+    name="correo" 
+    placeholder="Tu correo corporativo" 
+    autocomplete="email"
+    required
+  >
+  
+  <input 
+    type="tel" 
+    name="whatsapp" 
+    placeholder="Tu WhatsApp: +51 999999999" 
+    autocomplete="tel"
+    required
+  >
+  
+  <textarea 
+    name="mensaje" 
+    placeholder="Coméntanos sobre ti" 
+    rows="4"
+    autocomplete="off"
+    required
+  ></textarea>
+  
+  <button type="submit">Enviar mensaje</button>
+</form>
+
+<p style="font-size: 14px; color: #9AA7BD; margin-top: 12px;">
+  Te contactamos en 24 horas para coordinar tu inscripción. O escríbenos directo: 
+  <a href="https://wa.me/51999999999" target="_blank">WhatsApp</a>
+</p>
 
       <p class="contact-note" style="text-align:center;">Al enviar, se abrirá tu app de correo. O escríbenos directo: <a href="https://wa.me/51939834534" style="color:var(--cyan);">WhatsApp</a></p>
     </div>
