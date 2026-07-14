@@ -92,6 +92,187 @@
       .module{grid-template-columns:1fr}
       .kpis{grid-template-columns:repeat(2,minmax(0,1fr))}
     }
+    /* === FORMULARIO TAMESAD CON ANIMACIONES === */
+#contacto {
+  background: var(--bg-2);
+  padding: 80px 24px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+#contacto::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(76, 199, 245, 0.03) 0%, transparent 70%);
+  animation: pulse-glow 8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.1); }
+}
+
+#contacto h2 {
+  font-size: clamp(28px, 4vw, 42px);
+  margin-bottom: 12px;
+  position: relative;
+  z-index: 1;
+}
+
+#contacto p {
+  color: var(--muted);
+  margin-bottom: 32px;
+  font-size: 18px;
+  position: relative;
+  z-index: 1;
+}
+
+#contacto form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: grid;
+  gap: 16px;
+  position: relative;
+  z-index: 1;
+}
+
+#contacto input,
+#contacto textarea {
+  width: 100%;
+  padding: 16px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  color: var(--text);
+  font-size: 16px;
+  font-family: 'Inter', sans-serif;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(10px);
+}
+
+#contacto input::placeholder,
+#contacto textarea::placeholder {
+  color: var(--muted);
+  transition: all 0.3s ease;
+}
+
+#contacto input:focus,
+#contacto textarea:focus {
+  outline: none;
+  border-color: var(--brand);
+  background: rgba(76, 199, 245, 0.08);
+  box-shadow: 0 0 0 3px rgba(76, 199, 245, 0.15), 
+              0 8px 20px rgba(76, 199, 245, 0.1);
+  transform: translateY(-2px);
+}
+
+#contacto input:focus::placeholder,
+#contacto textarea:focus::placeholder {
+  transform: translateX(4px);
+  opacity: 0.7;
+}
+
+#contacto textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+#contacto button {
+  padding: 16px 32px;
+  background: linear-gradient(135deg, #4CC7F5, #6BD3FF);
+  color: #0B111A;
+  border: none;
+  border-radius: 999px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-top: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+#contacto button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+#contacto button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(76, 199, 245, 0.4);
+}
+
+#contacto button:active::before {
+  width: 300px;
+  height: 300px;
+}
+
+#contacto button:active {
+  transform: translateY(-1px);
+}
+
+#contacto .whatsapp-text {
+  margin-top: 20px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+#contacto .whatsapp-text a {
+  color: var(--brand);
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+}
+
+#contacto .whatsapp-text a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--brand);
+  transition: width 0.3s ease;
+}
+
+#contacto .whatsapp-text a:hover::after {
+  width: 100%;
+}
+
+#contacto form > * {
+  animation: fade-in-up 0.6s ease-out backwards;
+}
+
+#contacto form > *:nth-child(1) { animation-delay: 0.1s; }
+#contacto form > *:nth-child(2) { animation-delay: 0.2s; }
+#contacto form > *:nth-child(3) { animation-delay: 0.3s; }
+#contacto form > *:nth-child(4) { animation-delay: 0.4s; }
+#contacto form > *:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
   </style>
 </head>
 <body>
@@ -216,30 +397,68 @@
       </div>
     </div>
   </section>
-
-  <section id="contacto">
-    <div class="wrap">
-      <div class="eyebrow" style="justify-content:center;">Contacto</div>
-      <h2 style="text-align:center;">¿Listo para construir cartera multianual?</h2>
-      <p style="text-align:center; max-width:600px; margin:0 auto 30px;">Déjanos tus datos y te contactamos en 24 horas para coordinar tu inscripción.</p>
+<!-- ===== CONTACTO TAMESAD ===== -->
+<section id="contacto">
+  <div class="container">
+    <h2>¿Listo para construir cartera multianual?</h2>
+    <p>Déjanos tus datos y te contactamos en 24 horas para coordinar tu inscripción.</p>
+    
+    <form action="https://formspree.io/f/xykryajb" method="POST">
+      <div class="form-group">
+        <input 
+          type="text" 
+          id="nombre"
+          name="nombre" 
+          placeholder="Tu nombre completo" 
+          autocomplete="name"
+          required
+        >
+      </div>
       
-<!-- FORMULARIO TAMESAD CON FORMSPREE -->
-<form action="https://formspree.io/f/xykryajb" method="POST">
-  <input type="text" name="nombre" placeholder="Tu nombre completo" autocomplete="name" required>
-  <input type="email" name="correo" placeholder="Tu correo corporativo" autocomplete="email" required>
-  <input type="tel" name="whatsapp" placeholder="Tu WhatsApp: +51 999 999 999" autocomplete="tel" required>
-  <textarea name="mensaje" placeholder="Cuéntanos de tu empresa y qué proyectos vendes" rows="4" required></textarea>
-  <button type="submit">Enviar mensaje</button>
-</form>
-
-<p style="font-size: 14px; color: #9AA7BD; margin-top: 12px;">
-  Te contactamos en 24 horas para coordinar tu inscripción. O escríbenos directo: 
-  <a href="https://wa.me/51999999999" target="_blank">WhatsApp</a>
-</p>
-
-      <p class="contact-note" style="text-align:center;">Al enviar, se abrirá tu app de correo. O escríbenos directo: <a href="https://wa.me/51939834534" style="color:var(--cyan);">WhatsApp</a></p>
-    </div>
-  </section>
+      <div class="form-group">
+        <input 
+          type="email" 
+          id="correo"
+          name="correo" 
+          placeholder="Tu correo corporativo" 
+          autocomplete="email"
+          required
+        >
+      </div>
+      
+      <div class="form-group">
+        <input 
+          type="tel" 
+          id="whatsapp"
+          name="whatsapp" 
+          placeholder="Tu WhatsApp: +51 999 999 999" 
+          autocomplete="tel"
+          required
+        >
+      </div>
+      
+      <div class="form-group">
+        <textarea 
+          id="mensaje"
+          name="mensaje" 
+          placeholder="Cuéntanos de tu empresa y qué proyectos vendes" 
+          rows="4"
+          required
+        ></textarea>
+      </div>
+      
+      <!-- Anti-spam de Formspree -->
+      <input type="text" name="_gotcha" style="display:none">
+      
+      <button type="submit">Enviar mensaje</button>
+    </form>
+    
+    <p class="whatsapp-text">
+      Te contactamos en 24 horas. O escríbenos directo: 
+      <a href="https://wa.me/51999999999?text=Hola,%20quiero%20info%20sobre%20TAMESAD" target="_blank">WhatsApp</a>
+    </p>
+  </div>
+</section>
 
   <section class="final">
     <div class="wrap">
