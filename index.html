@@ -80,10 +80,6 @@
     .module img{width:100%;height:120px;object-fit:cover;border-radius:12px;border:1px solid var(--line)}
     .final{text-align:center;padding:100px 0}
     .final h2{font-size:clamp(32px,5vw,48px)}
-    .contact-form{max-width:500px; margin:30px auto; text-align:left;}
-    .contact-form input, .contact-form textarea{width:100%; padding:14px; margin-bottom:12px; border:1px solid var(--line); background:var(--bg-panel); color:var(--ink); border-radius:8px; font-family:var(--font-body); font-size:15px;}
-    .contact-form input:focus, .contact-form textarea:focus{outline:none; border-color:var(--cyan);}
-    .contact-form textarea{resize:vertical; min-height:100px;}
     footer{padding:40px 0;color:var(--ink-muted);border-top:1px solid var(--line)}
     .footer-grid{display:grid;grid-template-columns:1.2fr .8fr .8fr;gap:22px}
     .contact-note{color:var(--ink-muted);font-size:14px;margin-top:12px}
@@ -92,190 +88,208 @@
       .module{grid-template-columns:1fr}
       .kpis{grid-template-columns:repeat(2,minmax(0,1fr))}
     }
+    
     /* === FORMULARIO TAMESAD CON ANIMACIONES === */
-#contacto {
-  background: var(--bg-2);
-  padding: 80px 24px;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
+    #contacto {
+      background: var(--bg-elev);
+      padding: 80px 24px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
 
-#contacto::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(76, 199, 245, 0.03) 0%, transparent 70%);
-  animation: pulse-glow 8s ease-in-out infinite;
-  pointer-events: none;
-}
+    #contacto::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(76, 199, 245, 0.03) 0%, transparent 70%);
+      animation: pulse-glow 8s ease-in-out infinite;
+      pointer-events: none;
+    }
 
-@keyframes pulse-glow {
-  0%, 100% { opacity: 0.5; transform: scale(1); }
-  50% { opacity: 1; transform: scale(1.1); }
-}
+    @keyframes pulse-glow {
+      0%, 100% { opacity: 0.5; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.1); }
+    }
 
-#contacto h2 {
-  font-size: clamp(28px, 4vw, 42px);
-  margin-bottom: 12px;
-  position: relative;
-  z-index: 1;
-}
+    #contacto h2 {
+      font-size: clamp(28px, 4vw, 42px);
+      margin-bottom: 12px;
+      position: relative;
+      z-index: 1;
+    }
 
-#contacto p {
-  color: var(--muted);
-  margin-bottom: 32px;
-  font-size: 18px;
-  position: relative;
-  z-index: 1;
-}
+    #contacto p {
+      color: var(--ink-muted);
+      margin-bottom: 32px;
+      font-size: 18px;
+      position: relative;
+      z-index: 1;
+    }
 
-#contacto form {
-  max-width: 600px;
-  margin: 0 auto;
-  display: grid;
-  gap: 16px;
-  position: relative;
-  z-index: 1;
-}
+    #contacto form {
+      max-width: 600px;
+      margin: 0 auto;
+      display: grid;
+      gap: 16px;
+      position: relative;
+      z-index: 1;
+    }
 
-#contacto input,
-#contacto textarea {
-  width: 100%;
-  padding: 16px 20px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  color: var(--text);
-  font-size: 16px;
-  font-family: 'Inter', sans-serif;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  backdrop-filter: blur(10px);
-}
+    #contacto input,
+    #contacto textarea {
+      width: 100%;
+      padding: 16px 20px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      color: var(--ink);
+      font-size: 16px;
+      font-family: 'Inter', sans-serif;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      backdrop-filter: blur(10px);
+    }
 
-#contacto input::placeholder,
-#contacto textarea::placeholder {
-  color: var(--muted);
-  transition: all 0.3s ease;
-}
+    #contacto input::placeholder,
+    #contacto textarea::placeholder {
+      color: var(--ink-muted);
+      transition: all 0.3s ease;
+    }
 
-#contacto input:focus,
-#contacto textarea:focus {
-  outline: none;
-  border-color: var(--brand);
-  background: rgba(76, 199, 245, 0.08);
-  box-shadow: 0 0 0 3px rgba(76, 199, 245, 0.15), 
-              0 8px 20px rgba(76, 199, 245, 0.1);
-  transform: translateY(-2px);
-}
+    #contacto input:focus,
+    #contacto textarea:focus {
+      outline: none;
+      border-color: var(--cyan);
+      background: rgba(76, 199, 245, 0.08);
+      box-shadow: 0 0 0 3px rgba(76, 199, 245, 0.15), 
+                  0 8px 20px rgba(76, 199, 245, 0.1);
+      transform: translateY(-2px);
+    }
 
-#contacto input:focus::placeholder,
-#contacto textarea:focus::placeholder {
-  transform: translateX(4px);
-  opacity: 0.7;
-}
+    #contacto input:focus::placeholder,
+    #contacto textarea:focus::placeholder {
+      transform: translateX(4px);
+      opacity: 0.7;
+    }
 
-#contacto textarea {
-  resize: vertical;
-  min-height: 120px;
-}
+    #contacto textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
 
-#contacto button {
-  padding: 16px 32px;
-  background: linear-gradient(135deg, #4CC7F5, #6BD3FF);
-  color: #0B111A;
-  border: none;
-  border-radius: 999px;
-  font-size: 18px;
-  font-weight: 700;
-  cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  margin-top: 8px;
-  position: relative;
-  overflow: hidden;
-}
+    #contacto button {
+      padding: 16px 32px;
+      background: linear-gradient(135deg, #4CC7F5, #6BD3FF);
+      color: #0B0E13;
+      border: none;
+      border-radius: 999px;
+      font-size: 18px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      margin-top: 8px;
+      position: relative;
+      overflow: hidden;
+    }
 
-#contacto button::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.3);
-  transform: translate(-50%, -50%);
-  transition: width 0.6s, height 0.6s;
-}
+    #contacto button::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.3);
+      transform: translate(-50%, -50%);
+      transition: width 0.6s, height 0.6s;
+    }
 
-#contacto button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(76, 199, 245, 0.4);
-}
+    #contacto button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(76, 199, 245, 0.4);
+    }
 
-#contacto button:active::before {
-  width: 300px;
-  height: 300px;
-}
+    #contacto button:active::before {
+      width: 300px;
+      height: 300px;
+    }
 
-#contacto button:active {
-  transform: translateY(-1px);
-}
+    #contacto button:active {
+      transform: translateY(-1px);
+    }
 
-#contacto .whatsapp-text {
-  margin-top: 20px;
-  font-size: 14px;
-  color: var(--muted);
-}
+    #contacto .whatsapp-text {
+      margin-top: 20px;
+      font-size: 14px;
+      color: var(--ink-muted);
+    }
 
-#contacto .whatsapp-text a {
-  color: var(--brand);
-  text-decoration: none;
-  font-weight: 600;
-  position: relative;
-}
+    #contacto .whatsapp-text a {
+      color: var(--cyan);
+      text-decoration: none;
+      font-weight: 600;
+      position: relative;
+    }
 
-#contacto .whatsapp-text a::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: var(--brand);
-  transition: width 0.3s ease;
-}
+    #contacto .whatsapp-text a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--cyan);
+      transition: width 0.3s ease;
+    }
 
-#contacto .whatsapp-text a:hover::after {
-  width: 100%;
-}
+    #contacto .whatsapp-text a:hover::after {
+      width: 100%;
+    }
 
-#contacto form > * {
-  animation: fade-in-up 0.6s ease-out backwards;
-}
+    #contacto form > * {
+      animation: fade-in-up 0.6s ease-out backwards;
+    }
 
-#contacto form > *:nth-child(1) { animation-delay: 0.1s; }
-#contacto form > *:nth-child(2) { animation-delay: 0.2s; }
-#contacto form > *:nth-child(3) { animation-delay: 0.3s; }
-#contacto form > *:nth-child(4) { animation-delay: 0.4s; }
-#contacto form > *:nth-child(5) { animation-delay: 0.5s; }
+    #contacto form > *:nth-child(1) { animation-delay: 0.1s; }
+    #contacto form > *:nth-child(2) { animation-delay: 0.2s; }
+    #contacto form > *:nth-child(3) { animation-delay: 0.3s; }
+    #contacto form > *:nth-child(4) { animation-delay: 0.4s; }
+    #contacto form > *:nth-child(5) { animation-delay: 0.5s; }
 
-@keyframes fade-in-up {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+    @keyframes fade-in-up {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    /* Barra de urgencia */
+    .urgency-bar {
+      background:linear-gradient(90deg,#4CC7F5,#27B6A8);
+      color:#0B0E13;
+      text-align:center;
+      padding:10px 20px;
+      font-weight:600;
+      font-size:14px;
+      position:sticky;
+      top:0;
+      z-index:100;
+    }
   </style>
 </head>
 <body>
+  <!-- BARRA DE URGENCIA -->
+  <div class="urgency-bar">
+    🔥 Próxima cohorte inicia: 22 de julio 2026 | Solo quedan 25 cupos disponibles
+  </div>
 
   <header>
     <div class="wrap nav">
@@ -376,13 +390,13 @@
         <ul class="list">
           <li><i></i><span>Plantillas; diagnóstico, caso de negocio, roadmap 24-36m. Certificado por cada módulo.</span></li>
           <li><i></i><span>Checklist de comité de compra + guion de objeciones.</span></li>
-          <li><i></i><span>Cadencia de 90 días para deals  500k+.</span></li>
+          <li><i></i><span>Cadencia de 90 días para deals > 500k+.</span></li>
         </ul>
       </div>
       <div class="card">
         <h3>Para quién es</h3>
         <ul class="list">
-          <li><i></i><span>Empresas B2B con ticket  100k+.</span></li>
+          <li><i></i><span>Empresas B2B con ticket > 100k+.</span></li>
           <li><i></i><span>Gerentes comerciales, KAM, BD.</span></li>
           <li><i></i><span>Equipos que venden a corporativos y gobierno.</span></li>
         </ul>
@@ -397,68 +411,69 @@
       </div>
     </div>
   </section>
-<!-- ===== CONTACTO TAMESAD ===== -->
-<section id="contacto">
-  <div class="container">
-    <h2>¿Listo para construir cartera multianual?</h2>
-    <p>Déjanos tus datos y te contactamos en 24 horas para coordinar tu inscripción.</p>
-    
-    <form action="https://formspree.io/f/xykryajb" method="POST">
-      <div class="form-group">
-        <input 
-          type="text" 
-          id="nombre"
-          name="nombre" 
-          placeholder="Tu nombre completo" 
-          autocomplete="name"
-          required
-        >
-      </div>
+
+  <!-- ===== CONTACTO TAMESAD ===== -->
+  <section id="contacto">
+    <div class="wrap">
+      <h2>¿Listo para construir cartera multianual?</h2>
+      <p>Déjanos tus datos y te contactamos en 24 horas para coordinar tu inscripción.</p>
       
-      <div class="form-group">
-        <input 
-          type="email" 
-          id="correo"
-          name="correo" 
-          placeholder="Tu correo corporativo" 
-          autocomplete="email"
-          required
-        >
-      </div>
+      <form action="https://formspree.io/f/xykryajb" method="POST">
+        <div class="form-group">
+          <input 
+            type="text" 
+            id="nombre"
+            name="nombre" 
+            placeholder="Tu nombre completo" 
+            autocomplete="name"
+            required
+          >
+        </div>
+        
+        <div class="form-group">
+          <input 
+            type="email" 
+            id="correo"
+            name="correo" 
+            placeholder="Tu correo corporativo" 
+            autocomplete="email"
+            required
+          >
+        </div>
+        
+        <div class="form-group">
+          <input 
+            type="tel" 
+            id="whatsapp"
+            name="whatsapp" 
+            placeholder="Tu WhatsApp: +51 999 999 999" 
+            autocomplete="tel"
+            required
+          >
+        </div>
+        
+        <div class="form-group">
+          <textarea 
+            id="mensaje"
+            name="mensaje" 
+            placeholder="Cuéntanos de tu empresa y qué proyectos vendes" 
+            rows="4"
+            required
+          ></textarea>
+        </div>
+        
+        <!-- Anti-spam de Formspree -->
+        <input type="text" name="_gotcha" style="display:none">
+        
+        <button type="submit">Enviar mensaje</button>
+      </form>
       
-      <div class="form-group">
-        <input 
-          type="tel" 
-          id="whatsapp"
-          name="whatsapp" 
-          placeholder="Tu WhatsApp: +51 999 999 999" 
-          autocomplete="tel"
-          required
-        >
-      </div>
-      
-      <div class="form-group">
-        <textarea 
-          id="mensaje"
-          name="mensaje" 
-          placeholder="Cuéntanos de tu empresa y qué proyectos vendes" 
-          rows="4"
-          required
-        ></textarea>
-      </div>
-      
-      <!-- Anti-spam de Formspree -->
-      <input type="text" name="_gotcha" style="display:none">
-      
-      <button type="submit">Enviar mensaje</button>
-    </form>
-    
-    <p class="whatsapp-text">
-      Te contactamos en 24 horas. O escríbenos directo: 
-      <a href="https://wa.me/51999999999?text=Hola,%20quiero%20info%20sobre%20TAMESAD" target="_blank">WhatsApp</a>
-    </p>
-  </div>
-</section>
+      <p class="whatsapp-text">
+        Te contactamos en 24 horas. O escríbenos directo: 
+        <a href="https://wa.me/51939834534?text=Hola,%20quiero%20info%20sobre%20TAMESAD" target="_blank">WhatsApp</a>
+      </p>
+    </div>
+  </section>
 
   <section class="final">
     <div class="wrap">
@@ -471,37 +486,37 @@
       </div>
     </div>
   </section>
+
   <section id="faq">
-  <div class="wrap">
-    <div class="eyebrow" style="justify-content:center;">Preguntas frecuentes</div>
-    <h2 style="text-align:center;margin-bottom:40px;">Resolvemos tus dudas</h2>
-    
-    <div style="max-width:800px;margin:0 auto;display:grid;gap:16px;">
-
-      <details class="card" style="cursor:pointer;">
-        <summary style="font-weight:600;font-family:var(--font-heading);font-size:18px;padding:8px 0;">¿Qué pasa si mi equipo no tiene experiencia en deals de PEN$500k+?</summary>
-        <p style="margin-top:12px;">Perfecto. El programa está diseñado para equipos que hoy cierran PEN$100k-300k y quieren subir de liga. Te damos los guiones, plantillas y cadencia exacta. No necesitas haberlo hecho antes.</p>
-      </details>
-
-      <details class="card" style="cursor:pointer;">
-        <summary style="font-weight:600;font-family:var(--font-heading);font-size:18px;padding:8px 0;">¿En cuánto tiempo veo resultados?</summary>
-        <p style="margin-top:12px;">Las herramientas las usas desde la semana 1. Clientes reportan primeros deals grandes calificados en 50-60 días. El ciclo completo de venta B2B grande es 4-9 meses, pero el pipeline cambia en 90 días.</p>
-      </details>
-
-      <details class="card" style="cursor:pointer;">
-        <summary style="font-weight:600;font-family:var(--font-heading);font-size:18px;padding:8px 0;">¿Dan factura?</summary>
-        <p style="margin-top:12px;">Sí, emitimos factura: 50% para separar cupo, 50% antes de iniciar. Para empresas también manejamos OC.</p>
-      </details>
-
-      <details class="card" style="cursor:pointer;">
-        <summary style="font-weight:600;font-family:var(--font-heading);font-size:18px;padding:8px 0;">¿Es en vivo o grabado?</summary>
-        <p style="margin-top:12px;">100% en vivo por Meet. Trabajamos con tus cuentas reales. Quedan grabadas por si faltas a una sesión, pero el valor está en los ejercicios en vivo.</p>
-      </details>
+    <div class="wrap">
+      <div class="eyebrow" style="justify-content:center;">Preguntas frecuentes</div>
+      <h2 style="text-align:center;margin-bottom:40px;">Resolvemos tus dudas</h2>
       
+      <div style="max-width:800px;margin:0 auto;display:grid;gap:16px;">
 
+        <details class="card" style="cursor:pointer;">
+          <summary style="font-weight:600;font-family:var(--font-heading);font-size:18px;padding:8px 0;">¿Qué pasa si mi equipo no tiene experiencia en deals de PEN$500k+?</summary>
+          <p style="margin-top:12px;">Perfecto. El programa está diseñado para equipos que hoy cierran PEN$100k-300k y quieren subir de liga. Te damos los guiones, plantillas y cadencia exacta. No necesitas haberlo hecho antes.</p>
+        </details>
+
+        <details class="card" style="cursor:pointer;">
+          <summary style="font-weight:600;font-family:var(--font-heading);font-size:18px;padding:8px 0;">¿En cuánto tiempo veo resultados?</summary>
+          <p style="margin-top:12px;">Las herramientas las usas desde la semana 1. Clientes reportan primeros deals grandes calificados en 50-60 días. El ciclo completo de venta B2B grande es 4-9 meses, pero el pipeline cambia en 90 días.</p>
+        </details>
+
+        <details class="card" style="cursor:pointer;">
+          <summary style="font-weight:600;font-family:var(--font-heading);font-size:18px;padding:8px 0;">¿Dan factura?</summary>
+          <p style="margin-top:12px;">Sí, emitimos factura: 50% para separar cupo, 50% antes de iniciar. Para empresas también manejamos OC.</p>
+        </details>
+
+        <details class="card" style="cursor:pointer;">
+          <summary style="font-weight:600;font-family:var(--font-heading);font-size:18px;padding:8px 0;">¿Es en vivo o grabado?</summary>
+          <p style="margin-top:12px;">100% en vivo por Meet. Trabajamos con tus cuentas reales. Quedan grabadas por si faltas a una sesión, pero el valor está en los ejercicios en vivo.</p>
+        </details>
+        
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <footer>
     <div class="wrap footer-grid">
@@ -526,8 +541,4 @@
   </footer>
 
 </body>
-  <!-- BARRA DE URGENCIA -->
-<div style="background:linear-gradient(90deg,#4CC7F5,#27B6A8);color:#0B0E13;text-align:center;padding:10px 20px;font-weight:600;font-size:14px;position:sticky;top:0;z-index:100;">
-  🔥 Próxima cohorte inicia: 22 de julio 2026 | Solo quedan 25 cupos disponibles
-</div>
 </html>
