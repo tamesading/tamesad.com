@@ -13,7 +13,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon.png">
   <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon.png">
 
-  <!-- Google Analytics - CAMBIA G-2WT5M6ZYCW por tu ID -->
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-2WT5M6ZYCW"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -21,6 +21,18 @@
     gtag('js', new Date());
     gtag('config', 'G-2WT5M6ZYCW');
   </script>
+
+  <!-- TikTok Pixel Code Start -->
+  <script>
+ !function (w, d, t) {
+    w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
+  var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
+  ;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+    ttq.load('D9C2VNBC77U102661E90');
+    ttq.page();
+  }(window, document, 'ttq');
+  </script>
+  <!-- TikTok Pixel Code End -->
 
   <!-- Fuentes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -42,46 +54,46 @@
     h1,h2,h3{font-family:var(--font-heading);letter-spacing:-.02em;margin:0 0 10px}
     p{margin:0 0 14px;color:var(--ink-muted)}
     img{max-width:100%;display:block}
-    .wrap{width:min(1200px,92%);margin-inline:auto}
+   .wrap{width:min(1200px,92%);margin-inline:auto}
     section{padding:90px 0;border-bottom:1px solid var(--line)}
-    .eyebrow{display:inline-flex;gap:10px;align-items:center;color:var(--cyan);font-weight:600;letter-spacing:.12em;text-transform:uppercase;font-size:12px;margin-bottom:18px}
-    .eyebrow:before{content:"";width:28px;height:2px;background:linear-gradient(90deg,var(--cyan),transparent)}
-    .btn{display:inline-flex;align-items:center;gap:10px;padding:16px 22px;border-radius:999px;font-weight:600;text-decoration:none;transition:.25s; cursor:pointer; border:none; font-family:var(--font-body); font-size:16px;}
-    .btn-primary{background:linear-gradient(180deg,var(--cyan),var(--teal));color:#0B0E13;box-shadow:0 10px 30px rgba(76,199,245,.25)}
-    .btn-primary:hover{transform:translateY(-2px)}
-    .btn-ghost{border:1px solid var(--line-strong);color:var(--ink);background:rgba(255,255,255,.02)}
-    .btn-ghost:hover{background:rgba(255,255,255,.06)}
+   .eyebrow{display:inline-flex;gap:10px;align-items:center;color:var(--cyan);font-weight:600;letter-spacing:.12em;text-transform:uppercase;font-size:12px;margin-bottom:18px}
+   .eyebrow:before{content:"";width:28px;height:2px;background:linear-gradient(90deg,var(--cyan),transparent)}
+   .btn{display:inline-flex;align-items:center;gap:10px;padding:16px 22px;border-radius:999px;font-weight:600;text-decoration:none;transition:.25s; cursor:pointer; border:none; font-family:var(--font-body); font-size:16px;}
+   .btn-primary{background:linear-gradient(180deg,var(--cyan),var(--teal));color:#0B0E13;box-shadow:0 10px 30px rgba(76,199,245,.25)}
+   .btn-primary:hover{transform:translateY(-2px)}
+   .btn-ghost{border:1px solid var(--line-strong);color:var(--ink);background:rgba(255,255,255,.02)}
+   .btn-ghost:hover{background:rgba(255,255,255,.06)}
     header{position:sticky;top:0;z-index:50;background:rgba(11,14,19,.7);backdrop-filter:saturate(160%) blur(10px);border-bottom:1px solid var(--line)}
-    .nav{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
-    .brand{display:flex;align-items:center;gap:14px}
-    .brand img{height:36px}
-    .brand strong{font-family:var(--font-heading);font-size:22px;letter-spacing:.02em}
-    .nav a{color:var(--ink);text-decoration:none;font-weight:500;opacity:.9}
-    .nav-links{display:flex;gap:26px}
-    .hero{padding:120px 0 80px;background:radial-gradient(1200px 500px at 70% -20%, rgba(76,199,245,.25), transparent 60%), radial-gradient(800px 400px at 10% 0%, rgba(39,182,168,.18), transparent 55%)}
-    .hero h1{font-size:clamp(40px,6vw,64px);line-height:1.04}
-    .hero .sub{font-size:clamp(16px,2vw,20px);color:var(--ink-muted);max-width:780px}
-    .cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:26px}
-    .grid{display:grid;gap:22px}
-    .grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
-    .grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
-    .card{background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,0));border:1px solid var(--line);border-radius:var(--radius-lg);padding:26px;box-shadow:var(--shadow)}
-    .card h3{font-size:22px}
-    .badge{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;border:1px solid var(--line-strong);background:rgba(255,255,255,.03);color:var(--ink);font-weight:600}
-    .list{display:grid;gap:14px;margin:18px 0 0;padding:0;list-style:none}
-    .list li{display:flex;gap:12px;align-items:flex-start}
-    .list li i{width:22px;height:22px;border-radius:6px;background:linear-gradient(180deg,var(--cyan),var(--teal));flex:0 0 22px;margin-top:3px}
-    .kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:26px}
-    .kpi{background:var(--bg-panel);border:1px solid var(--line);border-radius:16px;padding:18px;text-align:center}
-    .kpi b{display:block;font-family:var(--font-heading);font-size:28px}
-    .modules{display:grid;gap:22px}
-    .module{display:grid;grid-template-columns:180px 1fr;gap:22px;align-items:center;background:var(--bg-elev);border:1px solid var(--line);border-radius:18px;padding:18px}
-    .module img{width:100%;height:120px;object-fit:cover;border-radius:12px;border:1px solid var(--line)}
-    .final{text-align:center;padding:100px 0}
-    .final h2{font-size:clamp(32px,5vw,48px)}
+   .nav{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+   .brand{display:flex;align-items:center;gap:14px}
+   .brand img{height:36px}
+   .brand strong{font-family:var(--font-heading);font-size:22px;letter-spacing:.02em}
+   .nav a{color:var(--ink);text-decoration:none;font-weight:500;opacity:.9}
+   .nav-links{display:flex;gap:26px}
+   .hero{padding:120px 0 80px;background:radial-gradient(1200px 500px at 70% -20%, rgba(76,199,245,.25), transparent 60%), radial-gradient(800px 400px at 10% 0%, rgba(39,182,168,.18), transparent 55%)}
+   .hero h1{font-size:clamp(40px,6vw,64px);line-height:1.04}
+   .hero.sub{font-size:clamp(16px,2vw,20px);color:var(--ink-muted);max-width:780px}
+   .cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:26px}
+   .grid{display:grid;gap:22px}
+   .grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+   .grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+   .card{background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,0));border:1px solid var(--line);border-radius:var(--radius-lg);padding:26px;box-shadow:var(--shadow)}
+   .card h3{font-size:22px}
+   .badge{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;border:1px solid var(--line-strong);background:rgba(255,255,255,.03);color:var(--ink);font-weight:600}
+   .list{display:grid;gap:14px;margin:18px 0 0;padding:0;list-style:none}
+   .list li{display:flex;gap:12px;align-items:flex-start}
+   .list li i{width:22px;height:22px;border-radius:6px;background:linear-gradient(180deg,var(--cyan),var(--teal));flex:0 0 22px;margin-top:3px}
+   .kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:26px}
+   .kpi{background:var(--bg-panel);border:1px solid var(--line);border-radius:16px;padding:18px;text-align:center}
+   .kpi b{display:block;font-family:var(--font-heading);font-size:28px}
+   .modules{display:grid;gap:22px}
+   .module{display:grid;grid-template-columns:180px 1fr;gap:22px;align-items:center;background:var(--bg-elev);border:1px solid var(--line);border-radius:18px;padding:18px}
+   .module img{width:100%;height:120px;object-fit:cover;border-radius:12px;border:1px solid var(--line)}
+   .final{text-align:center;padding:100px 0}
+   .final h2{font-size:clamp(32px,5vw,48px)}
     footer{padding:40px 0;color:var(--ink-muted);border-top:1px solid var(--line)}
-    .footer-grid{display:grid;grid-template-columns:1.2fr .8fr .8fr;gap:22px}
-    .contact-note{color:var(--ink-muted);font-size:14px;margin-top:12px}
+   .footer-grid{display:grid;grid-template-columns:1.2fr.8fr.8fr;gap:22px}
+   .contact-note{color:var(--ink-muted);font-size:14px;margin-top:12px}
 
     /* === FORMULARIO TAMESAD CON ANIMACIONES === */
     #contacto {
@@ -200,18 +212,18 @@
     #contacto button:active {
       transform: translateY(-1px);
     }
-    #contacto .whatsapp-text {
+    #contacto.whatsapp-text {
       margin-top: 20px;
       font-size: 14px;
       color: var(--ink-muted);
     }
-    #contacto .whatsapp-text a {
+    #contacto.whatsapp-text a {
       color: var(--cyan);
       text-decoration: none;
       font-weight: 600;
       position: relative;
     }
-    #contacto .whatsapp-text a::after {
+    #contacto.whatsapp-text a::after {
       content: '';
       position: absolute;
       bottom: -2px;
@@ -221,7 +233,7 @@
       background: var(--cyan);
       transition: width 0.3s ease;
     }
-    #contacto .whatsapp-text a:hover::after {
+    #contacto.whatsapp-text a:hover::after {
       width: 100%;
     }
     #contacto form > * {
@@ -245,7 +257,7 @@
     }
 
     /* Barra de urgencia */
-    .urgency-bar {
+   .urgency-bar {
       background:linear-gradient(90deg,#4CC7F5,#27B6A8);
       color:#0B0E13;
       text-align:center;
@@ -258,7 +270,7 @@
     }
 
     /* === QR FLOTANTE TAMESAD - ACTUALIZADO A 105PX === */
-    .qr-flotante-tamesad {
+   .qr-flotante-tamesad {
       position: fixed;
       bottom: 25px;
       right: 25px;
@@ -272,13 +284,13 @@
       filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.25));
       text-decoration: none;
     }
-    .qr-flotante-tamesad img {
+   .qr-flotante-tamesad img {
       width: 100%;
       height: 100%;
       display: block;
       border-radius: 16px;
     }
-    .qr-tooltip {
+   .qr-tooltip {
       position: absolute;
       bottom: 100%;
       right: 0;
@@ -296,7 +308,7 @@
       transition: all 0.3s ease;
       pointer-events: none;
     }
-    .qr-tooltip::after {
+   .qr-tooltip::after {
       content: '';
       position: absolute;
       top: 100%;
@@ -304,8 +316,8 @@
       border: 5px solid transparent;
       border-top-color: #1a1a1a;
     }
-    .qr-flotante-tamesad:hover .qr-tooltip,
-    .qr-flotante-tamesad:active .qr-tooltip {
+   .qr-flotante-tamesad:hover.qr-tooltip,
+   .qr-flotante-tamesad:active.qr-tooltip {
       opacity: 1;
       visibility: visible;
       transform: translateY(0);
@@ -314,7 +326,7 @@
       0%, 100% { transform: translateY(0px); }
       50% { transform: translateY(-10px); }
     }
-    .qr-flotante-tamesad:hover {
+   .qr-flotante-tamesad:hover {
       transform: scale(1.15);
       filter: drop-shadow(0 6px 20px rgba(40, 180, 130, 0.6));
       animation-play-state: paused;
@@ -323,55 +335,55 @@
     /* === RESPONSIVE FIXES === */
     @media (max-width: 980px){
       section{padding:60px 0}
-      .grid-2,.grid-3,.footer-grid{grid-template-columns:1fr}
-      .module{grid-template-columns:1fr}
-      .module img{height:180px}
-      .kpis{grid-template-columns:repeat(2,minmax(0,1fr))}
-      .hero{padding:80px 0 60px}
-      .hero h1{font-size:clamp(32px,8vw,48px)}
-      .cta-row{flex-direction:column}
-      .cta-row .btn{width:100%; justify-content:center}
-      .final{padding:60px 0}
+     .grid-2,.grid-3,.footer-grid{grid-template-columns:1fr}
+     .module{grid-template-columns:1fr}
+     .module img{height:180px}
+     .kpis{grid-template-columns:repeat(2,minmax(0,1fr))}
+     .hero{padding:80px 0 60px}
+     .hero h1{font-size:clamp(32px,8vw,48px)}
+     .cta-row{flex-direction:column}
+     .cta-row.btn{width:100%; justify-content:center}
+     .final{padding:60px 0}
       #contacto{padding:60px 16px}
       #contacto form{padding:0 8px}
     }
 
     @media (max-width: 768px){
-      .nav{flex-wrap:wrap; gap:16px}
-      .brand{width:100%; justify-content:center}
-      .nav-links{
+     .nav{flex-wrap:wrap; gap:16px}
+     .brand{width:100%; justify-content:center}
+     .nav-links{
         width:100%;
         justify-content:center;
         flex-wrap:wrap;
         gap:16px;
         font-size:14px;
       }
-      .nav-links a:not(.btn){padding:8px 0}
-      .nav-links .btn-ghost{padding:12px 20px; font-size:14px}
-      .eyebrow{font-size:11px}
-      .card{padding:20px}
-      .module{padding:16px}
-      .footer-grid{text-align:center}
-      .brand{justify-content:center}
-      .qr-flotante-tamesad {
+     .nav-links a:not(.btn){padding:8px 0}
+     .nav-links.btn-ghost{padding:12px 20px; font-size:14px}
+     .eyebrow{font-size:11px}
+     .card{padding:20px}
+     .module{padding:16px}
+     .footer-grid{text-align:center}
+     .brand{justify-content:center}
+     .qr-flotante-tamesad {
         width: 80px;
         height: 80px;
         bottom: 15px;
         right: 15px;
       }
-      .qr-tooltip {
+     .qr-tooltip {
         font-size: 12px;
         padding: 5px 10px;
       }
     }
 
     @media (max-width: 480px){
-      .wrap{width:94%}
-      .hero h1{font-size:28px}
-      .hero .sub{font-size:16px}
-      .kpis{grid-template-columns:1fr}
-      .kpi b{font-size:24px}
-      .btn{padding:14px 20px; font-size:15px}
+     .wrap{width:94%}
+     .hero h1{font-size:28px}
+     .hero.sub{font-size:16px}
+     .kpis{grid-template-columns:1fr}
+     .kpi b{font-size:24px}
+     .btn{padding:14px 20px; font-size:15px}
       #contacto h2{font-size:24px}
       #contacto p{font-size:16px}
     }
@@ -643,5 +655,14 @@
     <img src="./img/qr-tamesad.png" alt="QR Verificar Certificado">
     <span class="qr-tooltip">Verifica aquí</span>
   </a>
+
+  <!-- TikTok Form Submit Event -->
+  <script>
+  document.querySelector('#contacto form').addEventListener('submit', function() {
+    ttq.track('SubmitForm');
+    ttq.track('Contact');
+  });
+  </script>
+
 </body>
 </html>
