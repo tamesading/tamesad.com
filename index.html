@@ -331,6 +331,163 @@
       filter: drop-shadow(0 6px 20px rgba(40, 180, 130, 0.6));
       animation-play-state: paused;
     }
+    /* ================================
+   SECCIÓN EXPERTO TAMESAD
+================================ */
+
+.expert-section{
+padding:100px 0;
+background:
+radial-gradient(circle at left, rgba(76,199,245,.15), transparent 40%);
+border-bottom:1px solid var(--line);
+}
+
+.expert-container{
+width:min(1200px,92%);
+margin:auto;
+display:grid;
+grid-template-columns:420px 1fr;
+gap:70px;
+align-items:center;
+}
+
+
+.expert-photo{
+position:relative;
+}
+
+.photo-card{
+position:relative;
+border-radius:30px;
+overflow:hidden;
+border:1px solid var(--line);
+box-shadow:var(--shadow);
+}
+
+
+.photo-card img{
+width:100%;
+height:520px;
+object-fit:cover;
+}
+
+
+.photo-glow{
+position:absolute;
+width:300px;
+height:300px;
+background:var(--cyan);
+filter:blur(120px);
+opacity:.25;
+top:50px;
+left:-50px;
+}
+
+
+.expert-label{
+color:var(--cyan);
+font-size:13px;
+letter-spacing:.15em;
+font-weight:700;
+}
+
+
+.expert-content h2{
+font-size:clamp(32px,4vw,48px);
+margin:20px 0;
+}
+
+
+.expert-intro{
+font-size:18px;
+}
+
+
+.expert-divider{
+width:80px;
+height:3px;
+background:linear-gradient(90deg,var(--cyan),var(--teal));
+margin:30px 0;
+}
+
+
+.expert-content h3{
+font-size:32px;
+}
+
+
+.expert-content h4{
+color:var(--cyan);
+margin-bottom:30px;
+}
+
+
+.expert-features{
+display:grid;
+gap:18px;
+}
+
+
+.feature{
+display:flex;
+gap:18px;
+align-items:flex-start;
+}
+
+
+.feature-icon{
+font-size:28px;
+}
+
+
+.feature strong{
+display:block;
+}
+
+
+.feature span{
+color:var(--ink-muted);
+font-size:14px;
+}
+
+
+blockquote{
+margin:35px 0;
+padding:20px;
+border-left:3px solid var(--cyan);
+background:rgba(255,255,255,.03);
+border-radius:12px;
+font-style:italic;
+}
+
+
+.expert-stats{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:15px;
+}
+
+
+.expert-stats div{
+background:var(--bg-panel);
+border:1px solid var(--line);
+padding:20px;
+border-radius:16px;
+text-align:center;
+}
+
+
+.expert-stats span{
+display:block;
+font-size:35px;
+font-family:var(--font-heading);
+color:var(--cyan);
+}
+
+
+.expert-stats small{
+color:var(--ink-muted);
+}
 
     /* === RESPONSIVE FIXES === */
     @media (max-width: 980px){
@@ -882,6 +1039,138 @@
     ttq.track('Contact');
   });
   </script>
+  <script>
+
+/* ==============================
+   CONTADOR ANIMADO EXPERTO
+============================== */
+
+const counters = document.querySelectorAll('.counter');
+
+const startCounter = (counter) => {
+
+    const target = Number(counter.getAttribute('data-target'));
+    let current = 0;
+
+    const increment = Math.ceil(target / 80);
+
+    const updateCounter = () => {
+
+        current += increment;
+
+        if(current < target){
+
+            counter.textContent = current + "+";
+            requestAnimationFrame(updateCounter);
+
+        } else {
+
+            counter.textContent = target + "+";
+
+        }
+
+    };
+
+    updateCounter();
+
+};
+
+
+const observer = new IntersectionObserver((entries)=>{
+
+    entries.forEach(entry=>{
+
+        if(entry.isIntersecting){
+
+            startCounter(entry.target);
+
+            observer.unobserve(entry.target);
+
+        }
+
+    });
+
+},{threshold:0.5});
+
+
+counters.forEach(counter=>{
+
+    observer.observe(counter);
+
+});
+
+
+
+/* ==============================
+   ANIMACIÓN SCROLL SUAVE
+============================== */
+
+document.querySelectorAll('a[href^="#"]').forEach(link=>{
+
+    link.addEventListener('click',function(e){
+
+        const target=document.querySelector(this.getAttribute('href'));
+
+        if(target){
+
+            e.preventDefault();
+
+            target.scrollIntoView({
+
+                behavior:"smooth",
+                block:"start"
+
+            });
+
+        }
+
+    });
+
+});
+
+
+
+/* ==============================
+   EFECTO APARECER AL HACER SCROLL
+============================== */
+
+
+const revealElements=document.querySelectorAll(
+'.card,.module,.expert-photo,.expert-content,.kpi'
+);
+
+
+const revealObserver=new IntersectionObserver((items)=>{
+
+items.forEach(item=>{
+
+if(item.isIntersecting){
+
+item.target.style.opacity="1";
+item.target.style.transform="translateY(0)";
+
+}
+
+});
+
+},{threshold:0.15});
+
+
+
+revealElements.forEach(el=>{
+
+el.style.opacity="0";
+
+el.style.transform="translateY(30px)";
+
+el.style.transition="all .7s ease";
+
+revealObserver.observe(el);
+
+});
+
+
+</script>
 
 </body>
 </html>
