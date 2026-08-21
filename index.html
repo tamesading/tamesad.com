@@ -1,18 +1,15 @@
--<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
   <!-- SEO Básico -->
   <title>TAMESAD</title>
   <meta name="description" content="Formación en ventas B2B para empresas B2B. 4 módulos, 8 horas. Herramientas para construir cartera multianual. Lima, Perú.">
-
   <!-- Favicon TAMESAD TA -->
   <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon.png">
   <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon.png">
-
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-2WT5M6ZYCW"></script>
   <script>
@@ -21,7 +18,6 @@
     gtag('js', new Date());
     gtag('config', 'G-2WT5M6ZYCW');
   </script>
-
   <!-- TikTok Pixel Code Start -->
   <script>
  !function (w, d, t) {
@@ -33,12 +29,10 @@
   }(window, document, 'ttq');
   </script>
   <!-- TikTok Pixel Code End -->
-
   <!-- Fuentes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
   <style>
     :root{
       --bg:#0B0E13; --bg-panel:#0E131B; --bg-elev:#131A24;
@@ -94,6 +88,15 @@
     footer{padding:40px 0;color:var(--ink-muted);border-top:1px solid var(--line)}
    .footer-grid{display:grid;grid-template-columns:1.2fr.8fr.8fr;gap:22px}
    .contact-note{color:var(--ink-muted);font-size:14px;margin-top:12px}
+
+    /* === VIDEO DE YOUTUBE === */
+   .video-section{padding:90px 0;border-bottom:1px solid var(--line);}
+   .video-header{text-align:center;margin-bottom:30px;}
+   .video-header h2{font-size:clamp(28px,4vw,42px);margin-bottom:12px;}
+   .video-header p{color:var(--ink-muted);font-size:18px;}
+   .video-container{max-width:900px;margin:0 auto;border-radius:20px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);}
+   .video-wrapper{position:relative;padding-bottom:56.25%;height:0;}
+   .video-wrapper iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:none;}
 
     /* === FORMULARIO TAMESAD CON ANIMACIONES === */
     #contacto {
@@ -255,7 +258,6 @@
         transform: translateY(0);
       }
     }
-
     /* Barra de urgencia */
    .urgency-bar {
       background:linear-gradient(90deg,#4CC7F5,#27B6A8);
@@ -268,80 +270,77 @@
       top:0;
       z-index:100;
     }
-
     /* === QR FLOTANTE TAMESAD - ACTUALIZADO A 105PX === */
    .qr-flotante-tamesad {
-      position: fixed;
-      bottom: 25px;
-      right: 25px;
-      z-index: 9999;
-      width: 105px;
-      height: 105px;
-      background: transparent;
-      border-radius: 16px;
-      transition: all 0.3s ease;
-      animation: flotar-qr 4s ease-in-out infinite;
-      filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.25));
-      text-decoration: none;
+      position:fixed;
+      bottom:25px;
+      right:25px;
+      z-index:9999;
+      width:105px;
+      height:105px;
+      background:transparent;
+      border-radius:16px;
+      transition:all 0.3s ease;
+      animation:flotar-qr 4s ease-in-out infinite;
+      filter:drop-shadow(0 4px 12px rgba(0,0,0,0.25));
+      text-decoration:none;
     }
    .qr-flotante-tamesad img {
-      width: 100%;
-      height: 100%;
-      display: block;
-      border-radius: 16px;
+      width:100%;
+      height:100%;
+      display:block;
+      border-radius:16px;
     }
    .qr-tooltip {
-      position: absolute;
-      bottom: 100%;
-      right: 0;
-      margin-bottom: 10px;
-      background: #1a1a1a;
-      color: #fff;
-      padding: 6px 12px;
-      border-radius: 8px;
-      font-size: 13px;
-      font-family: var(--font-body);
-      white-space: nowrap;
-      opacity: 0;
-      visibility: hidden;
-      transform: translateY(5px);
-      transition: all 0.3s ease;
-      pointer-events: none;
+      position:absolute;
+      bottom:100%;
+      right:0;
+      margin-bottom:10px;
+      background:#1a1a1a;
+      color:#fff;
+      padding:6px 12px;
+      border-radius:8px;
+      font-size:13px;
+      font-family:var(--font-body);
+      white-space:nowrap;
+      opacity:0;
+      visibility:hidden;
+      transform:translateY(5px);
+      transition:all 0.3s ease;
+      pointer-events:none;
     }
    .qr-tooltip::after {
-      content: '';
-      position: absolute;
-      top: 100%;
-      right: 15px;
-      border: 5px solid transparent;
-      border-top-color: #1a1a1a;
+      content:'';
+      position:absolute;
+      top:100%;
+      right:15px;
+      border:5px solid transparent;
+      border-top-color:#1a1a1a;
     }
    .qr-flotante-tamesad:hover.qr-tooltip,
    .qr-flotante-tamesad:active.qr-tooltip {
-      opacity: 1;
-      visibility: visible;
-      transform: translateY(0);
+      opacity:1;
+      visibility:visible;
+      transform:translateY(0);
     }
     @keyframes flotar-qr {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-10px); }
+      0%,100%{transform:translateY(0px);}
+      50%{transform:translateY(-10px);}
     }
    .qr-flotante-tamesad:hover {
-      transform: scale(1.15);
-      filter: drop-shadow(0 6px 20px rgba(40, 180, 130, 0.6));
-      animation-play-state: paused;
+      transform:scale(1.15);
+      filter:drop-shadow(0 6px 20px rgba(40,180,130,0.6));
+      animation-play-state:paused;
     }
     /* ================================
    SECCIÓN EXPERTO TAMESAD
 ================================ */
-
 .expert-section{
 padding:100px 0;
 background:
 radial-gradient(circle at left, rgba(76,199,245,.15), transparent 40%);
 border-bottom:1px solid var(--line);
 }
-
 .expert-container{
 width:min(1200px,92%);
 margin:auto;
@@ -350,12 +349,9 @@ grid-template-columns:420px 1fr;
 gap:70px;
 align-items:center;
 }
-
-
 .expert-photo{
 position:relative;
 }
-
 .photo-card{
 position:relative;
 border-radius:30px;
@@ -363,15 +359,11 @@ overflow:hidden;
 border:1px solid var(--line);
 box-shadow:var(--shadow);
 }
-
-
 .photo-card img{
 width:100%;
 height:520px;
 object-fit:cover;
 }
-
-
 .photo-glow{
 position:absolute;
 width:300px;
@@ -382,75 +374,51 @@ opacity:.25;
 top:50px;
 left:-50px;
 }
-
-
 .expert-label{
 color:var(--cyan);
 font-size:13px;
 letter-spacing:.15em;
 font-weight:700;
 }
-
-
 .expert-content h2{
 font-size:clamp(32px,4vw,48px);
 margin:20px 0;
 }
-
-
 .expert-intro{
 font-size:18px;
 }
-
-
 .expert-divider{
 width:80px;
 height:3px;
 background:linear-gradient(90deg,var(--cyan),var(--teal));
 margin:30px 0;
 }
-
-
 .expert-content h3{
 font-size:32px;
 }
-
-
 .expert-content h4{
 color:var(--cyan);
 margin-bottom:30px;
 }
-
-
 .expert-features{
 display:grid;
 gap:18px;
 }
-
-
 .feature{
 display:flex;
 gap:18px;
 align-items:flex-start;
 }
-
-
 .feature-icon{
 font-size:28px;
 }
-
-
 .feature strong{
 display:block;
 }
-
-
 .feature span{
 color:var(--ink-muted);
 font-size:14px;
 }
-
-
 blockquote{
 margin:35px 0;
 padding:20px;
@@ -459,15 +427,11 @@ background:rgba(255,255,255,.03);
 border-radius:12px;
 font-style:italic;
 }
-
-
 .expert-stats{
 display:grid;
 grid-template-columns:repeat(3,1fr);
 gap:15px;
 }
-
-
 .expert-stats div{
 background:var(--bg-panel);
 border:1px solid var(--line);
@@ -475,50 +439,38 @@ padding:20px;
 border-radius:16px;
 text-align:center;
 }
-
-
 .expert-stats span{
 display:block;
 font-size:35px;
 font-family:var(--font-heading);
 color:var(--cyan);
 }
-
-
 .expert-stats small{
 color:var(--ink-muted); 
 }
-
     /* === RESPONSIVE FIXES === */
     @media (max-width: 980px){ 
       /* RESPONSIVE SECCIÓN EXPERTO */
-
 .expert-container{
     grid-template-columns:1fr;
     gap:40px;
 }
-
 .expert-photo{
     max-width:320px;
     margin:auto;
 }
-
 .photo-card img{
     height:420px;
 }
-
 .expert-content{
     text-align:center;
 }
-
 .expert-divider{
     margin:25px auto;
 }
-
 .expert-features{
     text-align:left;
 }
-
 .expert-stats{
     grid-template-columns:1fr;
     gap:15px;
@@ -536,7 +488,6 @@ color:var(--ink-muted);
       #contacto{padding:60px 16px}
       #contacto form{padding:0 8px}
     }
-
     @media (max-width: 768px){
      .nav{flex-wrap:wrap; gap:16px}
      .brand{width:100%; justify-content:center}
@@ -565,32 +516,25 @@ color:var(--ink-muted);
         padding: 5px 10px;
       }
     }
-
     @media (max-width: 480px){
       .expert-section{
     padding:60px 0;
 }
-
 .expert-container{
     width:94%;
 }
-
 .expert-photo{
     max-width:280px;
 }
-
 .photo-card img{
     height:360px;
 }
-
 .expert-content h2{
     font-size:28px;
 }
-
 .expert-content h3{
     font-size:26px;
 }
-
 .expert-stats span{
     font-size:30px;
 }
@@ -603,7 +547,6 @@ color:var(--ink-muted);
       #contacto h2{font-size:24px}
       #contacto p{font-size:16px}
     }
-
   </style>
 </head>
 <body>
@@ -611,7 +554,6 @@ color:var(--ink-muted);
   <div class="urgency-bar">
     🔥 Próxima cohorte inicia: 14 de septiembre 2026 | Solo quedan 25 cupos disponibles
   </div>
-
   <header>
     <div class="wrap nav">
       <div class="brand">
@@ -626,17 +568,15 @@ color:var(--ink-muted);
       </nav>
     </div>
   </header>
-
   <section class="hero">
     <div class="wrap">
       <div class="eyebrow">Ventas B2B de Proyectos de Gran Escala</div>
       <h1>Deja de perseguir ventas menores.<br>Construye cartera multianual.</h1>
-      <p class="sub">4 módulos, 8 horas, herramientas que usas desde el primer día. Para ti que vendes equipos, servicios y proyectos industriales: aprende a ganar contratos de PEN $500K+ con clientes corporativos del sector industrial</p>
+      <p class="sub">4 módulos, 8 horas, herramientas que usas desde el primer día. Para ti que vendes equipos, servicios y proyectos industriales: aprende a cerrar contratos de PEN $500K+ con clientes corporativos del sector industrial</p>
       <div class="cta-row">
         <a href="#contacto" class="btn btn-primary">Quiero inscribirme</a>
         <a href="#programa" class="btn btn-ghost">Ver programa</a>
       </div>
-
       <div class="kpis">
         <div class="kpi"><b>PEN$ 500k+</b><span>Ticket objetivo</span></div>
         <div class="kpi"><b>60%</b><span>Cartera con 2+ líneas</span></div>
@@ -645,28 +585,26 @@ color:var(--ink-muted);
       </div>
     </div>
   </section>
-
   <section id="por-que">
     <div class="wrap grid grid-2">
       <div class="card">
         <div class="eyebrow">El problema</div>
         <h2>Estás corriendo detrás de contratos modulares</h2>
         <ul class="list">
-          <li><i></i><span>Equipos atrapados en deals pequeños y ciclos largos.</span></li>
+          <li><i></i><span>Equipos atrapados en tratos pequeños y ciclos largos.</span></li>
           <li><i></i><span>Falta de método para proyectos de US$ 500k+.</span></li>
           <li><i></i><span>Dependencia de 1-2 cuentas grandes.</span></li>
-          <li><i></i><span>Pipeline lleno de “veremos”.</span></li>
+          <li><i></i><span>Canal de ventas lleno de "lo veremos".</span></li>
         </ul>
       </div>
       <div class="card">
         <div class="eyebrow">La solución TAMESAD</div>
         <h2>Proceso comercial para vender proyectos grandes</h2>
-        <p>Te damos el paso a paso para ir de “vendedor” a “asesor estratégico” que diseña roadmaps de 24-36 meses con el cliente.</p>
-        <div class="badge">Metodología propia, probada en campo</div>
+        <p>Te damos el paso a paso para pasar de "vendedor" a "asesor estratégico" que diseña hojas de ruta de 24-36 meses con el cliente.</p>
+        <div class="badge">Metodología propia, probada en el campo</div>
       </div>
     </div>
   </section>
-
   <section id="programa">
     <div class="wrap">
       <div class="eyebrow">Programa</div>
@@ -676,58 +614,57 @@ color:var(--ink-muted);
           <img src="./img/modulo1.jpg" alt="Módulo 1">
           <div>
             <h3>M1. Diagnóstico y Segmentación de Cuentas Clave</h3>
-            <p>Identifica dónde están los millones. Filtra cuentas por potencial real y construye tu lista de 20 objetivos.</p>
+            <p>Identifica dónde están los millones. Filtra las cuentas según su potencial real y elabora tu lista de 20 objetivos.</p>
           </div>
         </div>
         <div class="module">
           <img src="./img/modulo2.jpg" alt="Módulo 2">
           <div>
-            <h3>M2. Construcción de Propuesta de Valor B2B</h3>
-            <p>Deja de hablar de features. Diseña casos de negocio con ROI que el CFO firme sin dolor.</p>
+            <h3>M2. Elaboración de la propuesta de valor B2B</h3>
+            <p>Deja de hablar de características. Diseña casos de negocio con retorno de inversión que el director financiero aprobará sin dudar.</p>
           </div>
         </div>
         <div class="module">
           <img src="./img/modulo3.jpg" alt="Módulo 3">
           <div>
-            <h3>M3. Proceso Comercial para Deals de Gran Escala</h3>
-            <p>Mapea el comité de compra, neutraliza objeciones y acelera el ciclo. Playbook de 90 días.</p>
+            <h3>M3. Proceso comercial para proyectos de gran escala</h3>
+            <p>Identifica a los responsables de la compra, neutraliza las objeciones y acelera el ciclo. Plan de trabajo de 90 días.</p>
           </div>
         </div>
         <div class="module">
           <img src="./img/modulo4.jpg" alt="Módulo 4">
           <div>
-            <h3>M4. Land & Expand: De 1 Servicio a Cartera Multianual</h3>
-            <p>La fórmula para convertir el primer proyecto en 3-4 líneas de negocio con el mismo cliente.</p>
+            <h3>M4. Implantación y expansión: de un servicio a una cartera plurianual</h3>
+            <p>La fórmula para convertir el primer proyecto en 3 o 4 líneas de negocio con el mismo cliente.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
-
   <section id="resultados">
     <div class="wrap grid grid-3">
       <div class="card">
-        <h3>Qué te llevas</h3>
+        <h3>Lo que obtienes</h3>
         <ul class="list">
-          <li><i></i><span>Plantillas; diagnóstico, caso de negocio, roadmap 24-36m. Certificado por cada módulo.</span></li>
-          <li><i></i><span>Checklist de comité de compra + guion de objeciones.</span></li>
-          <li><i></i><span>Cadencia de 90 días para deals > PEN500k+.</span></li>
+          <li><i></i><span>Plantillas: diagnóstico, caso de negocio, hoja de ruta de 24 a 36 meses. Certificado por cada módulo.</span></li>
+          <li><i></i><span>Lista de comprobación del comité de compra + guion de respuestas a objeciones.</span></li>
+          <li><i></i><span>Calendario de 90 días para proyectos superiores a 500 000 PEN.</span></li>
         </ul>
       </div>
       <div class="card">
-        <h3>Para quién es</h3>
+        <h3>A quién va dirigido</h3>
         <ul class="list">
-          <li><i></i><span>Empresas B2B con ticket > PEN100k+.</span></li>
-          <li><i></i><span>Gerentes comerciales, KAM, BD.</span></li>
-          <li><i></i><span>Equipos que venden a corporativos y gobierno.</span></li>
+          <li><i></i><span>Empresas B2B con transacciones superiores a 100 000 PEN.</span></li>
+          <li><i></i><span>Directores comerciales, gestores de cuentas clave, desarrollo de negocio.</span></li>
+          <li><i></i><span>Equipos que venden a grandes empresas y a la Administración Pública.</span></li>
         </ul>
       </div>
       <div class="card">
         <h3>Formato</h3>
         <ul class="list">
-          <li><i></i><span>8 horas en 4 sesiones de 2h.</span></li>
-          <li><i></i><span>100% online, en vivo.</span></li>
-          <li><i></i><span>Ejercicios con tus cuentas reales.</span></li>
+          <li><i></i><span>8 horas en 4 sesiones de 2 horas.</span></li>
+          <li><i></i><span>Totalmente en línea, en directo.</span></li>
+          <li><i></i><span>Ejercicios prácticos con tus propias cuentas.</span></li>
         </ul>
       </div>
     </div>
@@ -735,237 +672,140 @@ color:var(--ink-muted);
   <!-- =======================================================
      SECCIÓN - CONOCE AL EXPERTO
 ======================================================= -->
-
 <section id="instructor" class="expert-section">
-
     <div class="expert-container">
-
         <!-- Imagen -->
-
         <div class="expert-photo">
-
             <div class="photo-glow"></div>
-
             <div class="photo-card">
-
                 <img
                     src="./img/alvaro-melendez.png"
                     alt="Álvaro Meléndez Moncada">
-
             </div>
-
         </div>
-
-</section>
-
         <!-- Información -->
-
         <div class="expert-content">
-
             <span class="expert-label">
-
                 CONOCE AL EXPERTO
-
             </span>
-
             <h2>
-
                 Aprende junto a un profesional con amplia experiencia formando especialistas de alto nivel.
-
             </h2>
-
             <p class="expert-intro">
-
-                Cada programa de TAMESAD está liderado por profesionales que combinan experiencia técnica, visión estratégica y un enfoque práctico orientado a resultados reales.
-
+                Cada programa de TAMESAD está dirigido por profesionales que combinan experiencia práctica, visión estratégica y un enfoque orientado a obtener resultados reales.
             </p>
-
-
-
             <div class="expert-divider"></div>
-
-
-
             <h3>
-
                 Álvaro Meléndez Moncada
-
             </h3>
-
             <h4>
-
                 Ingeniero Industrial
-
             </h4>
-
-
-
             <div class="expert-features">
-
                 <div class="feature">
-
                     <div class="feature-icon">
-
                         🏅
-
                     </div>
-
                     <div>
-
                         <strong>
-
-                            +13 años de experiencia
-
+                            Más de 13 años de experiencia
                         </strong>
-
                         <span>
-
                             Liderando proyectos de mejora continua y desarrollo organizacional.
-
                         </span>
-
                     </div>
-
                 </div>
-
-
-
                 <div class="feature">
-
                     <div class="feature-icon">
-
                         🏢
-
                     </div>
-
                     <div>
-
                         <strong>
-
-                            Consultor Empresarial
-
+                            Consultor empresarial
                         </strong>
-
                         <span>
-
                             Asesorando empresas en procesos, productividad y gestión.
-
                         </span>
-
                     </div>
-
                 </div>
-
-
-
                 <div class="feature">
-
                     <div class="feature-icon">
-
                         🎓
-
                     </div>
-
                     <div>
-
                         <strong>
-
-                            Instructor Especializado
-
+                            Instructor especializado
                         </strong>
-
                         <span>
-
-                            Formación práctica basada en experiencias reales del sector.
-
+                            Formación práctica basada en casos reales del sector.
                         </span>
-
                     </div>
-
                 </div>
-
             </div>
-
-
-
             <blockquote>
-
-                “Más que impartir conocimientos, mi propósito es formar profesionales capaces de tomar decisiones con seguridad, liderazgo y criterio técnico.”
-
+                "Más que impartir conocimientos, mi propósito es formar profesionales capaces de tomar decisiones con seguridad, liderazgo y criterio técnico."
             </blockquote>
-
-
-
             <div class="expert-stats">
-
                 <div>
-
                     <span class="counter" data-target="13">
-
                         0
-
                     </span>
-
                     <small>
-
                         Años de experiencia
-
                     </small>
-
                 </div>
-
-
-
                 <div>
-
                     <span class="counter" data-target="500">
-
                         0
-
                     </span>
-
-                </div>
-
-
-
-                <div>
-
-                    <span>
-
-                        100%
-
-                    </span>
-
                     <small>
-
-                        Compromiso con la excelencia
-
+                        Proyectos atendidos
                     </small>
-
                 </div>
-
+                <div>
+                    <span>
+                        100%
+                    </span>
+                    <small>
+                        Compromiso con la excelencia
+                    </small>
+                </div>
             </div>
-
         </div>
-
     </div>
-
 </section>
 
-  
-<iframe width="640" height="480" src="https://youtu.be/DZeYkKvqfaU" frameborder="0" allowfallscreen=" ">  
+  <!-- =======================================================
+     SECCIÓN - VIDEO DE YOUTUBE (¡YA INCLUIDO!)
+======================================================= -->
+  <section class="video-section">
+    <div class="wrap">
+      <div class="video-header">
+        <div class="eyebrow">Presentación</div>
+        <h2>Conoce al Ingeniero Álvaro Meléndez</h2>
+        <p>Mira la presentación en video y descubre cómo podemos ayudarte</p>
+      </div>
+      <div class="video-container">
+        <div class="video-wrapper">
+          <iframe 
+            src="https://www.youtube.com/embed/DZeYkKvqfaU?rel=0"
+            title="Presentación del Ingeniero Álvaro Meléndez para Capacitaciones TAMESAD"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  
   <!-- ===== CONTACTO TAMESAD ===== -->
   <section id="contacto">
     <div class="wrap">
-      <h2>¿Listo para construir cartera multianual?</h2>
-      <p>Déjanos tus datos y te contactamos en 24 horas para coordinar tu inscripción.</p>
-
+      <h2>¿Listo para construir una cartera de clientes plurianual?</h2>
+      <p>Déjanos tus datos y nos pondremos en contacto contigo en un plazo de 24 horas para tramitar tu inscripción.</p>
       <form action="https://formspree.io/f/xykryajb" method="POST">
         <input type="hidden" name="_next" value="https://tamesading.github.io/tamesad.com/gracias.html">
         <input type="hidden" name="_language" value="es">
-
         <div class="form-group">
           <input
             type="text"
@@ -976,95 +816,80 @@ color:var(--ink-muted);
             required
           >
         </div>
-
         <div class="form-group">
           <input
             type="email"
             id="correo"
             name="correo"
-            placeholder="Tu correo corporativo"
+            placeholder="Tu correo electrónico corporativo"
             autocomplete="email"
             required
           >
         </div>
-
         <div class="form-group">
           <input
             type="tel"
             id="whatsapp"
             name="whatsapp"
-            placeholder="Tu WhatsApp: +51 999 999 999"
+            placeholder="Tu número de WhatsApp: +51 999 999 999"
             autocomplete="tel"
             required
           >
         </div>
-
         <div class="form-group">
           <textarea
             id="mensaje"
             name="mensaje"
-            placeholder="Cuéntanos de tu empresa y qué proyectos vendes"
+            placeholder="Cuéntanos sobre tu empresa y qué tipo de proyectos vendes"
             rows="4"
             required
           ></textarea>
         </div>
-
-        <!-- Anti-spam de Formspree -->
+        <!-- Campo antispam de Formspree -->
         <input type="text" name="_gotcha" style="display:none">
-
         <button type="submit">Enviar mensaje</button>
       </form>
-
       <p class="whatsapp-text">
-        Te contactamos en 24 horas. O escríbenos directo:
-        <a href="https://wa.me/51939834534?text=Hola,%20quiero%20info%20sobre%20TAMESAD" target="_blank">WhatsApp</a>
+        Nos pondremos en contacto contigo en un plazo de 24 horas. También puedes escribirnos directamente:
+        <a href="https://wa.me/51939834534?text=Hola,%20quiero%20información%20sobre%20TAMESAD" target="_blank">WhatsApp</a>
       </p>
     </div>
   </section>
-
   <section class="final">
     <div class="wrap">
-      <div class="eyebrow" style="justify-content:center;">Cupos limitados</div>
-      <h2>Deja de perseguir ventas de menor valor.<br>Construye cartera multianual.</h2>
-      <p>4 sesiones, 8 horas, herramientas listas para usar desde la primera semana.</p>
+      <div class="eyebrow" style="justify-content:center;">Plazas limitadas</div>
+      <h2>Deja de perseguir ventas pequeñas.<br>Construye una cartera de clientes plurianual.</h2>
+      <p>4 sesiones, 8 horas, herramientas que podrás utilizar desde la primera semana.</p>
       <div class="cta-row" style="justify-content:center;">
         <a href="#contacto" class="btn btn-primary">Quiero inscribirme ahora</a>
         <a href="https://wa.me/51939834534" class="btn btn-ghost">WhatsApp directo</a>
       </div>
     </div>
   </section>
-
   <section id="faq">
     <div class="wrap">
       <div class="eyebrow" style="justify-content:center;">Preguntas frecuentes</div>
-      <h2 style="text-align:center;margin-bottom:40px;">Resolvemos tus dudas</h2>
-
+      <h2 style="text-align:center;margin-bottom:40px;">Respondemos tus dudas</h2>
       <div style="max-width:800px;margin:0 auto;display:grid;gap:16px;">
-
         <details class="card" style="cursor:pointer;">
-          <summary style="font-weight:600;font-family:var(--font-heading);font-size:18px;padding:8px 0;">¿Qué pasa si mi equipo no tiene experiencia en deals de PEN$500k+?</summary>
-          <p style="margin-top:12px;">Perfecto. El programa está diseñado para equipos que hoy cierran PEN$100k-300k y quieren subir de liga. Te damos los guiones, plantillas y cadencia exacta. No necesitas haberlo hecho antes.</p>
+          <summary style="font-weight:600;font-family:var(--font-heading);font-size:18px;padding:8px 0;">¿Qué ocurre si mi equipo no tiene experiencia en proyectos de valor superior a 500 000 PEN?</summary>
+          <p style="margin-top:12px;">Es ideal. El programa está diseñado para equipos que hoy cierran tratos de entre 100 000 y 300 000 PEN y desean dar el salto. Te proporcionamos los guiones, las plantillas y el calendario exacto. No necesitas haberlo hecho antes.</p>
         </details>
-
         <details class="card" style="cursor:pointer;">
-          <summary style="font-weight:600;font-family:var(--font-heading);font-size:18px;padding:8px 0;">¿En cuánto tiempo veo resultados?</summary>
-          <p style="margin-top:12px;">Las herramientas las usas desde la semana 1. Clientes reportan primeros deals grandes calificados en 50-60 días. El ciclo completo de venta B2B grande es 4-9 meses, pero el pipeline cambia en 90 días.</p>
+          <summary style="font-weight:600;font-family:var(--font-heading);font-size:18px;padding:8px 0;">¿En cuánto tiempo veré resultados?</summary>
+          <p style="margin-top:12px;">Las herramientas se utilizan desde la primera semana. Los clientes indican que en unos 50 a 60 días ya han calificado los primeros proyectos de gran envergadura. El ciclo completo de ventas B2B grandes suele durar de 4 a 9 meses, pero tu cartera de proyectos cambiará en 90 días.</p>
         </details>
-
         <details class="card" style="cursor:pointer;">
-          <summary style="font-weight:600;font-family:var(--font-heading);font-size:18px;padding:8px 0;">¿Dan factura?</summary>
-          <p style="margin-top:12px;">Sí, emitimos factura: 50% para separar cupo, 50% antes de iniciar. Para empresas también manejamos OC.</p>
+          <summary style="font-weight:600;font-family:var(--font-heading);font-size:18px;padding:8px 0;">¿Emiten factura?</summary>
+          <p style="margin-top:12px;">Sí, emitimos factura: el 50 % para reservar tu plaza y el 50 % restante antes del inicio del programa. También gestionamos pedidos de compra para empresas.</p>
         </details>
-
         <details class="card" style="cursor:pointer;">
-          <summary style="font-weight:600;font-family:var(--font-heading);font-size:18px;padding:8px 0;">¿Es en vivo o grabado?</summary>
-          <p style="margin-top:12px;">100% en vivo por Meet. Trabajamos con tus cuentas reales. Quedan grabadas por si faltas a una sesión, pero el valor está en los ejercicios en vivo.</p>
+          <summary style="font-weight:600;font-family:var(--font-heading);font-size:18px;padding:8px 0;">¿Las sesiones son en directo o grabadas?</summary>
+          <p style="margin-top:12px;">Se imparten en directo a través de Google Meet. Trabajamos con tus cuentas reales. Las sesiones quedan grabadas por si no puedes asistir a alguna, pero el mayor valor se obtiene con los ejercicios en directo.</p>
         </details>
-
       </div>
     </div>
   </section>
-
   <footer>
     <div class="wrap footer-grid">
       <div>
@@ -1072,7 +897,7 @@ color:var(--ink-muted);
           <img src="./img/logo.png" alt="TAMESAD">
           <strong>TAMESAD</strong>
         </div>
-        <p>Formación en ventas B2B para proyectos de gran escala. Metodología propia. Lima, Perú.</p>
+        <p>Formación en ventas B2B para proyectos de gran envergadura. Metodología propia. Lima, Perú.</p>
       </div>
       <div>
         <h3 style="font-family:var(--font-heading);font-size:16px;margin-bottom:12px;">Programa</h3>
@@ -1084,19 +909,17 @@ color:var(--ink-muted);
         <p>
           <a href="https://wa.me/51939834534" style="color:var(--cyan);text-decoration:none;">WhatsApp: +51 939 834 534</a><br>
           <a href="mailto:tamesading@gmail.com" style="color:var(--ink-muted);text-decoration:none;">tamesading@gmail.com</a><br>
-          <a href="#contacto" style="color:var(--ink-muted);text-decoration:none;">Formulario</a>
+          <a href="#contacto" style="color:var(--ink-muted);text-decoration:none;">Formulario de contacto</a>
         </p>
       </div>
     </div>
   </footer>
-
-  <!-- QR Flotante TAMESAD con tooltip - LINK CORREGIDO -->
-  <a href="https://tamesading.github.io/tamesad.com/verificador-certificados.html" class="qr-flotante-tamesad" target="_blank" aria-label="Verificar Certificado TAMESAD">
-    <img src="./img/qr-tamesad.png" alt="QR Verificar Certificado">
-    <span class="qr-tooltip">Verifica aquí</span>
+  <!-- Código QR flotante TAMESAD con información emergente -->
+  <a href="https://tamesading.github.io/tamesad.com/verificador-certificados.html" class="qr-flotante-tamesad" target="_blank" aria-label="Verificar certificado TAMESAD">
+    <img src="./img/qr-tamesad.png" alt="Código QR para verificar certificado">
+    <span class="qr-tooltip">Verifica tu certificado aquí</span>
   </a>
-
-  <!-- TikTok Form Submit Event -->
+  <!-- Evento de envío de formulario para TikTok -->
   <script>
   document.querySelector('#contacto form').addEventListener('submit', function() {
     ttq.track('SubmitForm');
@@ -1104,137 +927,39 @@ color:var(--ink-muted);
   });
   </script>
   <script>
-
 /* ==============================
-   CONTADOR ANIMADO EXPERTO
+   CONTADOR ANIMADO DEL EXPERTO
 ============================== */
-
 const counters = document.querySelectorAll('.counter');
-
 const startCounter = (counter) => {
-
     const target = Number(counter.getAttribute('data-target'));
     let current = 0;
-
     const increment = Math.ceil(target / 80);
-
     const updateCounter = () => {
-
         current += increment;
-
         if(current < target){
-
             counter.textContent = current + "+";
             requestAnimationFrame(updateCounter);
-
         } else {
-
             counter.textContent = target + "+";
-
         }
-
     };
-
     updateCounter();
-
 };
-
-
 const observer = new IntersectionObserver((entries)=>{
-
     entries.forEach(entry=>{
-
         if(entry.isIntersecting){
-
             startCounter(entry.target);
-
-            observer.unobserve(entry.target);
-
+            observer.unobserve(entry.target.target);
         }
-
     });
-
 },{threshold:0.5});
-
-
 counters.forEach(counter=>{
-
     observer.observe(counter);
-
 });
-
-
-
 /* ==============================
-   ANIMACIÓN SCROLL SUAVE
+   DESPLAZAMIENTO SUAVE
 ============================== */
-
-document.querySelectorAll('a[href^="#"]').forEach(link=>{
-
-    link.addEventListener('click',function(e){
-
-        const target=document.querySelector(this.getAttribute('href'));
-
-        if(target){
-
-            e.preventDefault();
-
-            target.scrollIntoView({
-
-                behavior:"smooth",
-                block:"start"
-
-            });
-
-        }
-
-    });
-
-});
-
-
-
-/* ==============================
-   EFECTO APARECER AL HACER SCROLL
-============================== */
-
-
-const revealElements=document.querySelectorAll(
-'.card,.module,.expert-photo,.expert-content,.kpi'
-);
-
-
-const revealObserver=new IntersectionObserver((items)=>{
-
-items.forEach(item=>{
-
-if(item.isIntersecting){
-
-item.target.style.opacity="1";
-item.target.style.transform="translateY(0)";
-
-}
-
-});
-
-},{threshold:0.15});
-
-
-
-revealElements.forEach(el=>{
-
-el.style.opacity="0";
-
-el.style.transform="translateY(30px)";
-
-el.style.transition="all .7s ease";
-
-revealObserver.observe(el);
-
-});
-
-
-</script>
-
-</body>
-</html>
+document.querySelectorAll('a[href^="#"]').forEach(enlace=>{
+    enlace.addEventListener('click',function(e){
+        const destino=document.querySelector(this
